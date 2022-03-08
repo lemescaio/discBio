@@ -1,0 +1,6 @@
+{% extends "disc_website/base.html" %}
+{% block content %}
+    {%for pergunta in perguntas %}
+        <li style="color:{% cycle 'blue' 'green' %}">{{ pergunta.enunciado }}</li>
+    {% endfor %}
+{% endblock %}
