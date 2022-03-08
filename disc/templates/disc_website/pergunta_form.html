@@ -1,0 +1,8 @@
+{% extends "disc_website/base.html" %}
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+<button type="submit">Salvar</button>
+</form>
+{% endblock %}
