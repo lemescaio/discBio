@@ -1,6 +1,6 @@
-{% extends "projeto5_website/base.html" %}
+{% extends "disc_website/base.html" %}
 {% block content %}
-  <form methof="post">
+  <form method="post">
     {% csrf_token %}
     <div>
       <input id="nome" type="text" placeholder="Digite seu Nome Completo" name="nome">
@@ -13,11 +13,12 @@
       <h3>{{pergunta}}</h3>
       <filedset>
         {% for alternativa in alternativas %}
-          <input type="radio" name="{{pergunta}}" value="{{pergunta.perfil}}">
+          <input type="radio" name="{{pergunta}}" value="{{alternativa.perfil}}">
           <label> {{alternativa.conteudo}}</label>
+          <br>
         {% endfor %}
       </filedset>
     {% endfor %}
-    <button type="submti">Enviar</button>
+    <button type="submit">Enviar</button>
   </form>
 {% endblock %}
