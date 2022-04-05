@@ -12,7 +12,9 @@ class Aluno(models.Model):
   nome = models.CharField(max_length=30)
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
-  turma = models.ManyToManyField(Turma)
+  #turma = models.ManyToManyField(Turma)
+  def __str__(self):
+      return str(self.ra)
 
 class Resultado(models.Model):
   aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
@@ -22,6 +24,9 @@ class Resultado(models.Model):
   dominancia = models.FloatField()
   cautela = models.FloatField()
   estabilidade = models.FloatField()
+  
+  def __str__(self):
+      return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
 
 
 class Teste(models.Model):
@@ -38,11 +43,12 @@ class Pergunta(models.Model):
     return self.enunciado
 
 CHOICES_ALTERNATIVA = (
-  (1,'dominância'),
-  (2,'influência'),
+  (1,'dominancia'),
+  (2,'influencia'),
   (3,'cautela'),
   (4,'estabilidade'),
 )
+
 class Alternativa(models.Model):
   pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
   conteudo = models.CharField(max_length=30, blank=False)
