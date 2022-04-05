@@ -4,9 +4,9 @@
     {% csrf_token %}
     <div>
       <input id="nome" type="text" placeholder="Digite seu Nome Completo" name="nome">
-      <br>
+      <br><br>
       <input id="email" type="text" placeholder="Digite seu E-mail" name="email">
-      <br>
+      <br><br>
       <input id="ra" type="text" placeholder="Digite seu RA" name="ra">
     </div>
     {% for pergunta,alternativas in perguntas.items %}
