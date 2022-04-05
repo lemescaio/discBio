@@ -1,6 +1,6 @@
 
 
-## Projeto 5 - Biopark
+## DISC - Biopark
 
 
 ### Setup de Ambiente DEV
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 #### Passo 3 - Carregando Fixtures
 
 ```
-python manage.py loaddata projeto5_website\fixtures\initial_data.json
+python manage.py loaddata disc_website\fixtures\initial_data.json
 ```
 
 #### Passo 4 - Criando superusuário

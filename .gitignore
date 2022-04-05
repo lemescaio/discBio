@@ -1,2 +1,4 @@
 db.sqlite3
 */__pycache__*
+disc_website/migrations/__pycache__*
+*/migrations/*
