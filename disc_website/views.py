@@ -20,12 +20,10 @@ def pergunta_form(request):
     else:
         form = PerguntaForm()
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
-<<<<<<< HEAD
-    
+
 def respostas(request):
     return render(request, "disc_website/respostas.html")
-    
-=======
+
 
 def teste(request, teste):
     #TODO: Criar um dicionario de perguntas/alternativas
@@ -77,4 +75,3 @@ def teste(request, teste):
         print(respostas_dict)
         return render(request, "disc_website/teste.html",
                       {'preguntas': perguntas_dict})
->>>>>>> 0e493e183a227b5e8e2aaf0ebbc27bb97c2bb118
