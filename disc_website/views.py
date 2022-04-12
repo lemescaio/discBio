@@ -32,7 +32,7 @@ def teste(request, teste):
         for pergunta in Pergunta.objects.filter(teste_id=teste):
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
-                      {"perguntas": perguntas_dict})
+                      {"perguntas": perguntas_dict, "navbar_teste" : "active"})
     elif request.method == "POST":
         print(request.POST)
         totalRespostas = 0

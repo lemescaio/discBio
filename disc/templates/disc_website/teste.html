@@ -1,31 +1,26 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-<div id="div-teste" class="col-md-12 ">
+<div class="col-md-12 ">
   <form method="post">
     {% csrf_token %}
     <div>
-      <h1 class="text-center">Teste DISC</h1>
-      <div class="input-group col-md-10">
+      <h1 class="text-center titulo-disc-teste">Formulário Teste DISC</h1>
+      <div class="input-group col-md-10 margin-cabecalho">
         <span class="input-group-text">Nome:</span>
         <input type="text" aria-label="First name" class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome">
       </div>
-      <br>
-      <div class="input-group col-md-5">
+      <div class="input-group col-md-5 margin-cabecalho">
         <span class="input-group-text">@E-mail:</span>
         <input id="email" type="text" placeholder="Digite seu E-mail" name="email" aria-label="First name" class="form-control">
       </div>
-      <br>
-      <div class="input-group col-md-5">
+      <div class="input-group col-md-5 margin-cabecalho">
         <span class="input-group-text">RA:</span>
         <input id="ra" type="text" placeholder="Digite seu RA" name="ra" aria-label="First name" class="form-control">
       </div>
     </div>
-    <br>
-
-
     <div>
       {% for pergunta,alternativas in perguntas.items %}
-      <div class="col-md-5">
+      <div class="col-md-5 margin-cabecalho">
         <h3>{{pergunta}}</h3>
       </div>
         <filedset>

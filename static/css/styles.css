@@ -1,3 +1,17 @@
-.div-teste{
-    background-image: "images/fundoTeste.png";
+body{
+    background: url("/static/images/biopark.png");
+    background-repeat: no-repeat;
+    background-position: 98% 0%;
+    background-size: 200px;
+    background-attachment: scroll;
+
+}
+
+.titulo-disc-teste{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.margin-cabecalho{
+    margin-top: 1%;
 }
