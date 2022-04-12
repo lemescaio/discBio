@@ -1,24 +1,45 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-  <form method="post">
-    {% csrf_token %}
-    <div>
-      <input id="nome" type="text" placeholder="Digite seu Nome Completo" name="nome">
-      <br>
-      <input id="email" type="text" placeholder="Digite seu E-mail" name="email">
-      <br>
-      <input id="ra" type="text" placeholder="Digite seu RA" name="ra">
-    </div>
-    {% for pergunta,alternativas in perguntas.items %}
-      <h3>{{pergunta}}</h3>
-      <filedset>
-        {% for alternativa in alternativas %}
-          <input type="radio" name="{{pergunta}}" value="{{alternativa.perfil}}">
-          <label> {{alternativa.conteudo}}</label>
-          <br>
-        {% endfor %}
-      </filedset>
-    {% endfor %}
-    <button type="submit">Enviar</button>
-  </form>
+<div id="div-teste" class="col-md-12 ">
+  <h1 class="text-center">Resultados DISC</h1>
+  <table class="table" id="table">
+    <thead>
+      <tr>
+        <td >Aluno</td>
+        <td>Data</td>
+        <td>Resultado</td>
+        <td>Predominância</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for resultado in resultados %}
+        <tr>
+          <td >{{resultado.aluno.nome}}</td>
+          <td>{{resultado.data_fim | date:"d/m/Y"}}</td>
+          <td>
+            <div class="progress" style="max-width: 80%">
+              <div title="Dominância" class="progress-bar"
+                  style="width: {% widthratio resultado.dominancia 1 100 %}%">
+                  {% widthratio resultado.dominancia 1 100 %}
+              </div>
+              <div title="Influencia" class="progress-bar bg-success"
+                  style="width: {% widthratio resultado.influencia 1 100 %}%">
+                  {% widthratio resultado.influencia 1 100 %}
+              </div>
+              <div title="Cautela" class="progress-bar bg-danger
+                  progress-bar-stripped" style="width: {% widthratio resultado.cautela 1 100 %}%">
+                  {% widthratio resultado.cautela 1 100 %}
+                  
+              </div>
+              <div title="Estabilidade" class="progress-bar bg-warning
+                  progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
+                  {% widthratio resultado.estabilidade 1 100 %}
+              </div>
+          </div>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</div>
 {% endblock %}
