@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pergunta_form/', views.pergunta_form, name='pergunta_form'),
     path('resultados/', views.resultados, name='resultados'),
-    path("teste/<int:teste>/", views.teste, name="teste"),
+    path("teste/", views.teste, name="teste"),
 ]

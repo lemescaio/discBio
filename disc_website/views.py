@@ -29,11 +29,11 @@ def resultados(request):
 
 
 
-def teste(request, teste):
+def teste(request):
     #TODO: Criar um dicionario de perguntas/alternativas
     perguntas_dict = {}
     if request.method == "GET":
-        for pergunta in Pergunta.objects.filter(teste_id=teste):
+        for pergunta in Pergunta.objects.filter():
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
                       {"perguntas": perguntas_dict, "navbar_teste" : "active"})
