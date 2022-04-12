@@ -21,8 +21,12 @@ def pergunta_form(request):
         form = PerguntaForm()
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
 
-def respostas(request):
-    return render(request, "disc_website/respostas.html")
+def resultados(request):
+    
+    return render(request, "disc_website/resultados.html",
+                  {"resultados": Resultado.objects.all()})
+                  
+
 
 
 def teste(request, teste):
