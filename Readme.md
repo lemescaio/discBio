@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python manage.py loaddata disc_website\fixtures\initial_data.json
 ```
 
-#### Passo 4 - Criando superusuário
+#### Passo 4 - Criando superusuario
 
 ```
 python manage.py createsuperuser
