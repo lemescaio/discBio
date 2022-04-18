@@ -3,12 +3,17 @@
 <div id="div-teste" class="col-md-12 ">
   <h1 class="text-center">Resultados DISC</h1>
   <table class="table" id="table">
+    <div>
+      <h3>Legenda:</h3>
+
+
+    </div>
     <thead>
       <tr>
         <td >Aluno</td>
         <td>Data</td>
         <td>Resultado</td>
-        <td>Predominância</td>
+        <td>Perfil</td>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +40,10 @@
                   progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
                   {% widthratio resultado.estabilidade 1 100 %}
               </div>
-          </div>
+            </div>
+          </td>
+          <td>
+            teste
           </td>
         </tr>
       {% endfor %}

@@ -22,9 +22,20 @@ def pergunta_form(request):
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
 
 def resultados(request):
-    
+    resultados_dict = {}
+    for resultado in Resultado.objects.all():
+        resultados_dict["dominancia"] = resultado.dominancia
+        resultados_dict["influencia"] = resultado.influencia
+        resultados_dict["cautela"] = resultado.cautela
+        resultados_dict["estabilidade"] = resultado.estabilidade
+        resultados_sorted = {}
+        resultados_sorted = sorted(resultados_dict.items(), key=lambda kv: kv[1], reverse=True)
+
+
     return render(request, "disc_website/resultados.html",
-                  {"resultados": Resultado.objects.all()})
+                  {"resultados": Resultado.objects.all(),
+                   "predominancia" : resultados_dict,
+                   "navbar_resultados" : "active"})
                   
 
 
