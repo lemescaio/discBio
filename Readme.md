@@ -10,12 +10,12 @@
 
 #### Passo 1 - Criando virtual env (raiz do projeto clonado)
 ```bash
-python3 -m venv .venv
+python -m venv .venv
 ```
 Ativando o virtual env
 
 ```
-.venv\Script\activate
+.venv\Scripts\activate
 ```
 
 #### Passo 2 - Instalando Requisitos
