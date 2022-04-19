@@ -21,18 +21,33 @@ def pergunta_form(request):
         form = PerguntaForm()
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
 
-def respostas(request):
-    return render(request, "disc_website/respostas.html")
+def resultados(request):
+    resultados_dict = {}
+    for resultado in Resultado.objects.all():
+        resultados_dict["dominancia"] = resultado.dominancia
+        resultados_dict["influencia"] = resultado.influencia
+        resultados_dict["cautela"] = resultado.cautela
+        resultados_dict["estabilidade"] = resultado.estabilidade
+        resultados_sorted = {}
+        resultados_sorted = sorted(resultados_dict.items(), key=lambda kv: kv[1], reverse=True)
 
 
-def teste(request, teste):
+    return render(request, "disc_website/resultados.html",
+                  {"resultados": Resultado.objects.all(),
+                   "predominancia" : resultados_dict,
+                   "navbar_resultados" : "active"})
+                  
+
+
+
+def teste(request):
     #TODO: Criar um dicionario de perguntas/alternativas
     perguntas_dict = {}
     if request.method == "GET":
-        for pergunta in Pergunta.objects.filter(teste_id=teste):
+        for pergunta in Pergunta.objects.filter():
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
-                      {"perguntas": perguntas_dict})
+                      {"perguntas": perguntas_dict, "navbar_teste" : "active"})
     elif request.method == "POST":
         print(request.POST)
         totalRespostas = 0
@@ -45,7 +60,7 @@ def teste(request, teste):
         ra = request.POST["ra"]
         email = request.POST["email"]
         nome = request.POST["nome"]
-        print (request.POST)
+        print(request.POST)
         for chave, conteudo in request.POST.items():
             if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
                 respostas_dict[conteudo[0]] += 1
@@ -73,5 +88,8 @@ def teste(request, teste):
         resultado.save()
         
         print(respostas_dict)
-        return render(request, "disc_website/teste.html",
-                      {'preguntas': perguntas_dict})
+        return HttpResponseRedirect("/obrigado/{}".format(aluno.nome))
+
+def obrigado(request, nome):
+    return render(request, "disc_website/obrigado.html",
+                  {"nome": nome.split()[0]})
