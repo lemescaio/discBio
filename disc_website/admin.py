@@ -1,5 +1,5 @@
 from django.contrib import admin
-from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Pergunta
+from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Pergunta, Link
 
 # Register your models here.
 
@@ -17,3 +17,4 @@ admin.site.register(Teste)
 admin.site.register(Resultado, ResultadoAdmin)
 admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Turma)
+admin.site.register(Link)
