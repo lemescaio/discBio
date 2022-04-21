@@ -15,3 +15,11 @@ body{
 .margin-cabecalho{
     margin-top: 2%;
 }
+
+.cabecalhoTabela{
+    font-weight: bold;
+}
+
+.legenda{
+    margin-bottom: 7px;
+}
