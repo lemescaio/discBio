@@ -1,16 +1,27 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-<div id="div-teste" class="col-md-12 ">
+<div id="div-teste" class="col-md-12">
   <h1 class="text-center">Resultados DISC</h1>
-  <table class="table" id="table">
-    <div>
-      <h3>Legenda:</h3>
+  <div class="legenda">
+    <h5 style="display: inline-block">Legenda:</h5>
+    <div class="progress-bar col-md-1" style="display: inline-block">Dominância</div>
+    <div class="progress-bar bg-success col-md-1" style="display: inline-block">Influência</div>
+    <div class="progress-bar bg-danger progress-bar-stripped col-md-1" style="display: inline-block">Cautela</div>
+    <div class="progress-bar bg-warning progress-bar-stx'ripped col-md-1" style="display: inline-block" >Estabilidade</div>
 
-
+    <div class="input-group" >
+      <div class="form-outline">
+        <input id="search-focus" type="search" id="form1" class="form-control" placeholder="Buscar Aluno" />
+      </div>
+      <button type="button" class="btn btn-primary">
+        <i class="bi-search"></i>
+      </button>
     </div>
+  </div>
+  <table class="table" id="table">
     <thead>
-      <tr>
-        <td >Aluno</td>
+      <tr class="cabecalhoTabela">
+        <td>Aluno</td>
         <td>Data</td>
         <td>Resultado</td>
         <td>Perfil</td>
