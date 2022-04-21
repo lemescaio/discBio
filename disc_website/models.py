@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 # Create your models here.
 
@@ -59,3 +60,6 @@ class Alternativa(models.Model):
         self.pergunta.__str__()[:15]+'...',
         self.pergunta.teste.__str__()])
 
+class Link(models.Model):
+  id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+  expire_date = models.DateTimeField()
