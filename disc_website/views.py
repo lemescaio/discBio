@@ -84,5 +84,8 @@ def teste(request, id):
         resultado.save()
         
         print(respostas_dict)
-        return render(request, "disc_website/teste.html",
-                      {'preguntas': perguntas_dict})
+        return HttpResponseRedirect("/obrigado/{}".format(aluno.nome))
+
+def obrigado(request, nome):
+    return render(request, "disc_website/obrigado.html",
+                  {"nome": nome.split()[0]})
