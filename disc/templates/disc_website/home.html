@@ -1,6 +1,11 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-    {%for pergunta in perguntas %}
-        <li style="color:{% cycle 'blue' 'green' %}">{{ pergunta.enunciado }}</li>
-    {% endfor %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-5 offset-md-5 margin-cabecalho">
+			<img  src="./static/images/imagem-disc-2.png"/>
+		</div>
+	</div>
+</div>
 {% endblock %}
