@@ -36,7 +36,6 @@ def teste(request, id):
     perguntas_dict = {}
     if request.method == "GET":
         link = Link.objects.get(id=id)
-        teste_data_hora = datetime.now()
         if link.expire_date < datetime.now().replace(tzinfo=utc):
             return HttpResponseRedirect('/admin')
 

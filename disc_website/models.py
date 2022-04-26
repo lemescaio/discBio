@@ -13,6 +13,7 @@ class Aluno(models.Model):
   nome = models.CharField(max_length=30)
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
+  aluno_empregado = models.BooleanField(default=False)
   #turma = models.ManyToManyField(Turma)
   def __str__(self):
       return str(self.ra)
@@ -63,3 +64,7 @@ class Alternativa(models.Model):
 class Link(models.Model):
   id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
   expire_date = models.DateTimeField()
+
+  @property
+  def link(self):
+    return '{}/{}'.format('localhost:8000/teste', str(self.id))
