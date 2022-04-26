@@ -1,216 +1,1058 @@
 [
-    {
-        "model": "disc_website.aluno",
-        "pk": 1,
-        "fields": {
-            "nome": "456",
-            "ra": 456,
-            "email": "456"
-        }
-    },
-    {
-        "model": "disc_website.aluno",
-        "pk": 2,
-        "fields": {
-            "nome": "789",
-            "ra": 789,
-            "email": "789"
-        }
-    },
-    {
-        "model": "disc_website.aluno",
-        "pk": 3,
-        "fields": {
-            "nome": "1",
-            "ra": 1,
-            "email": "1"
-        }
-    },
-    {
-        "model": "disc_website.aluno",
-        "pk": 4,
-        "fields": {
-            "nome": "78",
-            "ra": 78,
-            "email": "78@gmail.com"
-        }
-    },
-    {
-        "model": "disc_website.aluno",
-        "pk": 5,
-        "fields": {
-            "nome": "7891",
-            "ra": 7891,
-            "email": "7891"
-        }
-    },
-    {
-        "model": "disc_website.aluno",
-        "pk": 6,
-        "fields": {
-            "nome": "Gabriel Cavalcante",
-            "ra": 123,
-            "email": "gabriel@ssys.com.br"
-        }
-    },
-    {
-        "model": "disc_website.resultado",
-        "pk": 1,
-        "fields": {
-            "aluno": 3,
-            "data_ini": "2022-03-28T20:53:01.992Z",
-            "data_fim": "2022-03-28T20:53:01.992Z",
-            "influencia": 0.0,
-            "dominancia": 0.0,
-            "cautela": 0.5,
-            "estabilidade": 0.5
-        }
-    },
-    {
-        "model": "disc_website.resultado",
-        "pk": 2,
-        "fields": {
-            "aluno": 2,
-            "data_ini": "2022-03-28T21:36:13.990Z",
-            "data_fim": "2022-03-28T21:36:13.990Z",
-            "influencia": 0.0,
-            "dominancia": 0.5,
-            "cautela": 0.5,
-            "estabilidade": 0.0
-        }
-    },
-    {
-        "model": "disc_website.resultado",
-        "pk": 3,
-        "fields": {
-            "aluno": 4,
-            "data_ini": "2022-03-28T21:36:51Z",
-            "data_fim": "2022-03-28T21:36:51Z",
-            "influencia": 0.0,
-            "dominancia": 0.5,
-            "cautela": 0.5,
-            "estabilidade": 0.0
-        }
-    },
-    {
-        "model": "disc_website.resultado",
-        "pk": 4,
-        "fields": {
-            "aluno": 5,
-            "data_ini": "2022-03-28T21:58:09.057Z",
-            "data_fim": "2022-03-28T21:58:09.057Z",
-            "influencia": 0.0,
-            "dominancia": 0.5,
-            "cautela": 0.5,
-            "estabilidade": 0.0
-        }
-    },
-    {
-        "model": "disc_website.resultado",
-        "pk": 5,
-        "fields": {
-            "aluno": 6,
-            "data_ini": "2022-03-28T22:02:35.273Z",
-            "data_fim": "2022-03-28T22:02:35.273Z",
-            "influencia": 0.0,
-            "dominancia": 1.0,
-            "cautela": 0.0,
-            "estabilidade": 0.0
-        }
-    },
-    {
-        "model": "disc_website.teste",
-        "pk": 1,
-        "fields": {
-            "nome": "Teste 01"
-        }
-    },
-    {
-        "model": "disc_website.pergunta",
-        "pk": 1,
-        "fields": {
-            "teste": 1,
-            "enunciado": "Pergunta 01 do Teste 01?"
-        }
-    },
-    {
-        "model": "disc_website.pergunta",
-        "pk": 2,
-        "fields": {
-            "teste": 1,
-            "enunciado": "Pergunta 02 do Teste 01"
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 1,
-        "fields": {
-            "pergunta": 1,
-            "conteudo": "Dominancia",
-            "perfil": 1
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 2,
-        "fields": {
-            "pergunta": 1,
-            "conteudo": "Influencia",
-            "perfil": 2
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 3,
-        "fields": {
-            "pergunta": 1,
-            "conteudo": "Cautela",
-            "perfil": 3
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 4,
-        "fields": {
-            "pergunta": 1,
-            "conteudo": "Estabilidade",
-            "perfil": 4
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 5,
-        "fields": {
-            "pergunta": 2,
-            "conteudo": "Influencia",
-            "perfil": 2
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 6,
-        "fields": {
-            "pergunta": 2,
-            "conteudo": "Dominancia",
-            "perfil": 1
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 7,
-        "fields": {
-            "pergunta": 2,
-            "conteudo": "Cautela",
-            "perfil": 3
-        }
-    },
-    {
-        "model": "disc_website.alternativa",
-        "pk": 8,
-        "fields": {
-            "pergunta": 2,
-            "conteudo": "Estabilidade",
-            "perfil": 4
-        }
-    }
-    ]
+{
+  "model": "disc_website.pergunta",
+  "pk": 1,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 21"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 2,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 22"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 3,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 23"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 4,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 24"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 5,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 17"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 6,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 18"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 7,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 19"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 8,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 20"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 9,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 13"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 10,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 14"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 11,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 15"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 12,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 16"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 13,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 9"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 14,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 10"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 15,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 11"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 16,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 12"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 17,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 5"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 18,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 6"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 19,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 7"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 20,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 8"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 21,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 1"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 22,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 2"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 23,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 3"
+  }
+},
+{
+  "model": "disc_website.pergunta",
+  "pk": 24,
+  "fields": {
+    "teste": 2,
+    "enunciado": "Questão 4"
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 1,
+  "fields": {
+    "pergunta": 27,
+    "conteudo": "impaciente, não se permite relaxar, não descansa",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 2,
+  "fields": {
+    "pergunta": 27,
+    "conteudo": "sociável, amável",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 3,
+  "fields": {
+    "pergunta": 27,
+    "conteudo": "popular, apreciado por muitas pessoas",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 4,
+  "fields": {
+    "pergunta": 27,
+    "conteudo": "ordenado, organizado, claro",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 5,
+  "fields": {
+    "pergunta": 26,
+    "conteudo": "agradável, sua companhia é prazerosa",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 6,
+  "fields": {
+    "pergunta": 26,
+    "conteudo": "exato, correto, preciso",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 7,
+  "fields": {
+    "pergunta": 26,
+    "conteudo": "tem opiniões claras, fala livre e abertamente",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 8,
+  "fields": {
+    "pergunta": 26,
+    "conteudo": "reservado, controlado",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 9,
+  "fields": {
+    "pergunta": 25,
+    "conteudo": "socialmente hábil, gosta de estar com os demais",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 10,
+  "fields": {
+    "pergunta": 25,
+    "conteudo": "educado, culto, conhecedor",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 11,
+  "fields": {
+    "pergunta": 25,
+    "conteudo": "vigoroso, enérgico",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 12,
+  "fields": {
+    "pergunta": 25,
+    "conteudo": "tolerante, pouco exato, compreensivo",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 13,
+  "fields": {
+    "pergunta": 24,
+    "conteudo": "confia nos demais, tem fé nas pessoas",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 14,
+  "fields": {
+    "pergunta": 24,
+    "conteudo": "contente, satisfeito",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 15,
+  "fields": {
+    "pergunta": 24,
+    "conteudo": "positivo, não admite dúvidas nem temores",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 16,
+  "fields": {
+    "pergunta": 24,
+    "conteudo": "pacífico, tranquilo",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 17,
+  "fields": {
+    "pergunta": 23,
+    "conteudo": "gosta de discutir, controverso, confrontante",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 18,
+  "fields": {
+    "pergunta": 23,
+    "conteudo": "adaptável, flexível",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 19,
+  "fields": {
+    "pergunta": 23,
+    "conteudo": "relaxado, leva as coisas com calma, tranquilo",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 20,
+  "fields": {
+    "pergunta": 23,
+    "conteudo": "leve, despreocupado, descomplicado",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 21,
+  "fields": {
+    "pergunta": 22,
+    "conteudo": "respeitoso, trata as pessoas com consideração",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 22,
+  "fields": {
+    "pergunta": 22,
+    "conteudo": "pioneiro, explorador, inovador",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 23,
+  "fields": {
+    "pergunta": 22,
+    "conteudo": "otimista, vê o lado positivo de tudo",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 24,
+  "fields": {
+    "pergunta": 22,
+    "conteudo": "se acomoda, complacente, pronto para ajudar",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 25,
+  "fields": {
+    "pergunta": 21,
+    "conteudo": "admirável, digno de reconhecimento ",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 26,
+  "fields": {
+    "pergunta": 21,
+    "conteudo": "amável, desejoso de ajudar e de compartilhar",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 27,
+  "fields": {
+    "pergunta": 21,
+    "conteudo": "resignado, desiste, não luta",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 28,
+  "fields": {
+    "pergunta": 21,
+    "conteudo": "caráter forte, poderoso",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 29,
+  "fields": {
+    "pergunta": 20,
+    "conteudo": "muito disciplinado, auto controlado",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 30,
+  "fields": {
+    "pergunta": 20,
+    "conteudo": "generoso, gosta de compartilhar",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 31,
+  "fields": {
+    "pergunta": 20,
+    "conteudo": "animado, expressivo, usa muitos gestos",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 32,
+  "fields": {
+    "pergunta": 20,
+    "conteudo": "persistente, não volta atrás, se nega a perder",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 33,
+  "fields": {
+    "pergunta": 19,
+    "conteudo": "tem autoconfiança, crê em si mesmo, seguro",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 34,
+  "fields": {
+    "pergunta": 19,
+    "conteudo": "compreensivo, compassivo, apoiador das pessoas",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 35,
+  "fields": {
+    "pergunta": 19,
+    "conteudo": "tolerante",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 36,
+  "fields": {
+    "pergunta": 19,
+    "conteudo": "assertivo, agressivo, direto",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 37,
+  "fields": {
+    "pergunta": 18,
+    "conteudo": "entusiasta, se envolve com o que faz",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 38,
+  "fields": {
+    "pergunta": 18,
+    "conteudo": "impaciente, ansioso, desesperado às vezes",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 39,
+  "fields": {
+    "pergunta": 18,
+    "conteudo": "amistoso, consegue acordos, aceita",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 40,
+  "fields": {
+    "pergunta": 18,
+    "conteudo": "animado, vivaz, entusiasta",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 41,
+  "fields": {
+    "pergunta": 17,
+    "conteudo": "cuidadoso, desconfiado, cauteloso",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 42,
+  "fields": {
+    "pergunta": 17,
+    "conteudo": "determinado, decidido, não desiste, se põe firme",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 43,
+  "fields": {
+    "pergunta": 17,
+    "conteudo": "convincente, transmite segurança",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 44,
+  "fields": {
+    "pergunta": 17,
+    "conteudo": "de bom caráter, cortês, gosta de satisfazer os demais",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 45,
+  "fields": {
+    "pergunta": 16,
+    "conteudo": "agressivo, desafiante, enfocado na ação ou objetivo",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 46,
+  "fields": {
+    "pergunta": 16,
+    "conteudo": "alma da festa, divertido, extrovertido",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 47,
+  "fields": {
+    "pergunta": 16,
+    "conteudo": "ingênuo, é fácil que se aproveitem dele",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 48,
+  "fields": {
+    "pergunta": 16,
+    "conteudo": "temeroso, tende a preocupar-se muito",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 49,
+  "fields": {
+    "pergunta": 15,
+    "conteudo": "refinado, elegante ao falar",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 50,
+  "fields": {
+    "pergunta": 15,
+    "conteudo": "busca desafios, assume riscos",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 51,
+  "fields": {
+    "pergunta": 15,
+    "conteudo": "diplomático, tem tato com as pessoas",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 52,
+  "fields": {
+    "pergunta": 15,
+    "conteudo": "satisfeito, contente, confortável",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 53,
+  "fields": {
+    "pergunta": 14,
+    "conteudo": "expressivo, fala muito",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 54,
+  "fields": {
+    "pergunta": 14,
+    "conteudo": "controlado, pouco expressivo",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 55,
+  "fields": {
+    "pergunta": 14,
+    "conteudo": "convencional, sistemático, gosta da rotina",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 56,
+  "fields": {
+    "pergunta": 14,
+    "conteudo": "decidido, certo, firme ao tomar decisões",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 57,
+  "fields": {
+    "pergunta": 13,
+    "conteudo": "aventureiro, desejoso de arriscar-se",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 58,
+  "fields": {
+    "pergunta": 13,
+    "conteudo": "receptivo, aberto a sugestões",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 59,
+  "fields": {
+    "pergunta": 13,
+    "conteudo": "cordial, cálido, amistoso",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 60,
+  "fields": {
+    "pergunta": 13,
+    "conteudo": "moderado, evita os extremos",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 61,
+  "fields": {
+    "pergunta": 12,
+    "conteudo": "sociável, desfruta da companhia dos outros",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 62,
+  "fields": {
+    "pergunta": 12,
+    "conteudo": "paciente, estável, tolerante",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 63,
+  "fields": {
+    "pergunta": 12,
+    "conteudo": "autossuficiente, independente",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 64,
+  "fields": {
+    "pergunta": 12,
+    "conteudo": "reservado",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 65,
+  "fields": {
+    "pergunta": 11,
+    "conteudo": "valente, temerário, cheio de coragem",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 66,
+  "fields": {
+    "pergunta": 11,
+    "conteudo": "inspirador, estimulante, motivador",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 67,
+  "fields": {
+    "pergunta": 11,
+    "conteudo": "obediente, não confronta, cede facilmente",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 68,
+  "fields": {
+    "pergunta": 11,
+    "conteudo": "tímido, apreensivo, calado",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 69,
+  "fields": {
+    "pergunta": 10,
+    "conteudo": "exigente, difícil de satisfazer",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 70,
+  "fields": {
+    "pergunta": 10,
+    "conteudo": "obediente, faz o que lhe pedem que faça, comedido",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 71,
+  "fields": {
+    "pergunta": 10,
+    "conteudo": "tenaz e decidido, determinado",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 72,
+  "fields": {
+    "pergunta": 10,
+    "conteudo": "brincalhão, divertido",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 73,
+  "fields": {
+    "pergunta": 9,
+    "conteudo": "competitivo, busca ganhar ",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 74,
+  "fields": {
+    "pergunta": 9,
+    "conteudo": "carinhoso, tem muito tato",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 75,
+  "fields": {
+    "pergunta": 9,
+    "conteudo": "extrovertido, gosta de divertir-se ",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 76,
+  "fields": {
+    "pergunta": 9,
+    "conteudo": "harmonioso, busca o acordo",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 77,
+  "fields": {
+    "pergunta": 8,
+    "conteudo": "jovial, gosta de alegrar as pessoas ",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 78,
+  "fields": {
+    "pergunta": 8,
+    "conteudo": "preciso, exato",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 79,
+  "fields": {
+    "pergunta": 8,
+    "conteudo": "decidido, determinado, audaz",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 80,
+  "fields": {
+    "pergunta": 8,
+    "conteudo": "estável, de temperamento tranquilo, calmo",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 81,
+  "fields": {
+    "pergunta": 7,
+    "conteudo": "mente aberta, receptivo",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 82,
+  "fields": {
+    "pergunta": 7,
+    "conteudo": "reconhecido pelos demais, gosta de ajudar",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 83,
+  "fields": {
+    "pergunta": 7,
+    "conteudo": "voluntarioso, caráter forte e decidido",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 84,
+  "fields": {
+    "pergunta": 7,
+    "conteudo": "alegre, divertido",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 85,
+  "fields": {
+    "pergunta": 6,
+    "conteudo": "fácil de guiar, seguidor",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 86,
+  "fields": {
+    "pergunta": 6,
+    "conteudo": "direto, desafiador",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 87,
+  "fields": {
+    "pergunta": 6,
+    "conteudo": "leal, devoto, fiel",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 88,
+  "fields": {
+    "pergunta": 6,
+    "conteudo": "encantador, faz com que as pessoas gostem",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 89,
+  "fields": {
+    "pergunta": 5,
+    "conteudo": "atrativo, simpático, agradável para os demais",
+    "perfil": 2
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 90,
+  "fields": {
+    "pergunta": 5,
+    "conteudo": "cooperativo, está de acordo com frequência",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 91,
+  "fields": {
+    "pergunta": 5,
+    "conteudo": "teimoso, tenaz, combativo",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 92,
+  "fields": {
+    "pergunta": 5,
+    "conteudo": "doce, complacente",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 93,
+  "fields": {
+    "pergunta": 4,
+    "conteudo": "amável, gentil",
+    "perfil": 3
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 94,
+  "fields": {
+    "pergunta": 4,
+    "conteudo": "persuasivo, convincente",
+    "perfil": 1
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 95,
+  "fields": {
+    "pergunta": 4,
+    "conteudo": "humilde, reservado, modesto",
+    "perfil": 4
+  }
+},
+{
+  "model": "disc_website.alternativa",
+  "pk": 96,
+  "fields": {
+    "pergunta": 4,
+    "conteudo": "original, inovador, diferente",
+    "perfil": 2
+  }
+}
+]

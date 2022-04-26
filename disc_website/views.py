@@ -2,7 +2,10 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from disc_website.forms import PerguntaForm
-from disc_website.models import CHOICES_ALTERNATIVA, Alternativa, Aluno, Pergunta, Resultado
+from disc_website.models import CHOICES_ALTERNATIVA, Alternativa, Aluno, Pergunta, Resultado, Link
+import pytz
+
+utc=pytz.UTC
 
 # Create your views here.
 
@@ -42,10 +45,14 @@ def resultados(request):
                    "navbar_resultados" : "active"})
 
 
-def teste(request):
+def teste(request, id):
     #TODO: Criar um dicionario de perguntas/alternativas
     perguntas_dict = {}
     if request.method == "GET":
+        link = Link.objects.get(id=id)
+        if link.expire_date < datetime.now().replace(tzinfo=utc):
+            return HttpResponseRedirect('/admin')
+
         for pergunta in Pergunta.objects.filter():
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
@@ -90,5 +97,8 @@ def teste(request):
         resultado.save()
         
         print(respostas_dict)
-        return render(request, "disc_website/teste.html",
-                      {'preguntas': perguntas_dict})
+        return HttpResponseRedirect("/obrigado/{}".format(aluno.nome))
+
+def obrigado(request, nome):
+    return render(request, "disc_website/obrigado.html",
+                  {"nome": nome.split()[0]})
