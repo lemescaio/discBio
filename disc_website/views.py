@@ -25,11 +25,25 @@ def pergunta_form(request):
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
 
 def resultados(request):
-    alunos = Aluno.objects.filter(nome__icontains='cavalc')
-    alunos = Aluno.objects.all()
+    if request.method == 'POST':
+        busca = request.POST['buscaAluno']
+        if not busca:
+            alunos = Aluno.objects.all()
+            return render(request, "disc_website/resultados.html",
+                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
+                           "navbar_resultados": "active"})
+        else:
+            alunos = Aluno.objects.filter(nome__icontains=busca)
+            return render(request, "disc_website/resultados.html",
+                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
+                           "navbar_resultados": "active"})
+    else:
+        alunos = Aluno.objects.all()
+
     return render(request, "disc_website/resultados.html",
                   {"resultados": Resultado.objects.filter(aluno__in=alunos),
                    "navbar_resultados" : "active"})
+
 
 def teste(request, id):
     #TODO: Criar um dicionario de perguntas/alternativas

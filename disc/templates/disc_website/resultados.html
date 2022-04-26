@@ -2,29 +2,41 @@
 {% block content %}
 <div id="div-teste" class="col-md-12">
   <h1 class="text-center">Resultados DISC</h1>
-  <div class="legenda">
-    <h5 style="display: inline-block">Legenda:</h5>
-    <div class="progress-bar col-md-1" style="display: inline-block">Dominância</div>
-    <div class="progress-bar bg-success col-md-1" style="display: inline-block">Influência</div>
-    <div class="progress-bar bg-danger progress-bar-stripped col-md-1" style="display: inline-block">Cautela</div>
-    <div class="progress-bar bg-warning progress-bar-stx'ripped col-md-1" style="display: inline-block" >Estabilidade</div>
+</div>
 
-    <div class="input-group" >
-      <div class="form-outline">
-        <input id="search-focus" type="search" id="form1" class="form-control" placeholder="Buscar Aluno" />
-      </div>
-      <button type="button" class="btn btn-primary">
-        <i class="bi-search"></i>
-      </button>
-    </div>
-  </div>
-  <table class="table" id="table">
+  <table class="legendaTable" style="margin: 2%">
+      <tr>
+        <td width="74%">
+          <h5 style="display: inline-block">Legenda:</h5>
+          <div class="progress-bar" style="display: inline-block; width: 10%">Dominância</div>
+          <div class="progress-bar bg-success" style="display: inline-block; width: 10%">Influência</div>
+          <div class="progress-bar bg-danger progress-bar-stripped" style="display: inline-block; width: 10%">Cautela</div>
+          <div class="progress-bar bg-warning progress-bar-stx'ripped" style="display: inline-block; width: 10%" >Estabilidade</div>
+        </td>
+        <td width="22%">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+              <div class="form-outline">
+                <input id="search-focus" type="search" id="buscaAluno" name="buscaAluno" class="form-control" placeholder="Buscar Aluno" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" >
+                <i class="bi-search" ></i>
+              </button>
+            </div>
+          </form>
+        </td>
+      </tr>
+  </table>
+
+  <table class="table" id="table" >
     <thead>
       <tr class="cabecalhoTabela">
-        <td>Aluno</td>
-        <td>Data</td>
-        <td>Resultado</td>
-        <td>Perfil</td>
+        <td width="25%">Aluno</td>
+        <td width="10%">Data</td>
+        <td width="25%">Resultado</td>
+        <td width="15%">Perfil</td>
+        <td width="15%">Empregado</td>
       </tr>
     </thead>
     <tbody>
@@ -52,6 +64,9 @@
                   {% widthratio resultado.estabilidade 1 100 %}
               </div>
             </div>
+          </td>
+          <td>
+            teste
           </td>
           <td>
             teste
