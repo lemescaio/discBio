@@ -53,7 +53,7 @@ CHOICES_ALTERNATIVA = (
 
 class Alternativa(models.Model):
   pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
-  conteudo = models.CharField(max_length=30, blank=False)
+  conteudo = models.CharField(max_length=140, blank=False)
   perfil = models.IntegerField(choices=CHOICES_ALTERNATIVA, blank=False)
   
   def __str__(self):
