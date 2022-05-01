@@ -24,5 +24,6 @@ urlpatterns = [
     path('pergunta_form/', views.pergunta_form, name='pergunta_form'),
     path('resultados/', views.resultados, name='resultados'),
     path("teste/<uuid:id>", views.teste, name="teste"),
+    path('login/', views.login, name='login'),
     path('obrigado/<str:nome>/', views.obrigado, name='obrigado')
 ]
