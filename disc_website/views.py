@@ -102,3 +102,6 @@ def teste(request, id):
 def obrigado(request, nome):
     return render(request, "disc_website/obrigado.html",
                   {"nome": nome.split()[0]})
+
+def login(request):
+    return render(request, "disc_website/login.html")
