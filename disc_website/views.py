@@ -105,3 +105,6 @@ def obrigado(request, nome):
 
 def login(request):
     return render(request, "disc_website/login.html")
+
+def handler404(request, exception):
+    return render(request, 'disc_website/404.html')
