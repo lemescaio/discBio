@@ -30,8 +30,8 @@
         <filedset>
           {% for alternativa in alternativas %}
           <div class="col-md-5">
-            <input type="radio" name="{{pergunta}}" value="{{alternativa.perfil}}">
-            <label> {{alternativa.conteudo}}</label>
+            <input type="radio" name="{{pergunta}}" id="{{alternativa}}" value="{{alternativa.pergunta}}">
+            <label for="{{alternativa}}"> {{alternativa.conteudo}}</label>
             <br>
           </div>
           {% endfor %}
