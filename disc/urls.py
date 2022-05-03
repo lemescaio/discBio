@@ -16,6 +16,7 @@ Including another URLconf
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path
+from disc_website.views import handler404
 from disc_website import views
 
 urlpatterns = [
@@ -27,3 +28,5 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('obrigado/<str:nome>/', views.obrigado, name='obrigado')
 ]
+
+handler404 = 'disc_website.views.handler404'
