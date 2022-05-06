@@ -27,6 +27,18 @@ class Resultado(models.Model):
   cautela = models.FloatField()
   estabilidade = models.FloatField()
   
+  def resultado_final(self):
+    res_perfis = [("Dominante", self.dominancia), 
+                  ("Influente",self.influencia), 
+                  ("Cauteloso",self.cautela), 
+                  ("Estável",self.estabilidade)]
+    res_perfis.sort(reverse=True, key=lambda t: t[1])
+    res = ""
+    for perfil in res_perfis:  
+      if perfil[1] == res_perfis[0][1]:
+        res += perfil[0] + ' '
+    return res
+  
   def __str__(self):
       return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
 
