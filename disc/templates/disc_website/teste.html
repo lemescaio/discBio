@@ -30,7 +30,7 @@
         <filedset>
           {% for alternativa in alternativas %}
           <div class="col-md-5">
-            <input type="radio" name="{{pergunta}}" id="{{alternativa}}" value="{{alternativa.perfil}}">
+            <input type="radio" name="{{pergunta}}" id="{{alternativa}}" value="{{alternativa.perfil}}" onclick="Check(this)" required>
             <label for="{{alternativa}}"> {{alternativa.conteudo}}</label>
             <br>
           </div>
@@ -38,10 +38,11 @@
         </filedset>
       {% endfor %}
       <div class="col-md-4 offset-md-4 margin-cabecalho">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+        <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar</button>
       </div>
       </div> 
     </div>
   </form>
 </div>
+<script src="/static/js/javascript.js"></script>
 {% endblock %}
