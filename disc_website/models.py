@@ -26,8 +26,10 @@ class Resultado(models.Model):
   dominancia = models.FloatField()
   cautela = models.FloatField()
   estabilidade = models.FloatField()
-  
-  def resultado_final(self):
+  resultado_final = models.CharField(max_length=255, default="")
+
+  # verifica o resultado final e retorna como string
+  def get_resultado_final(self):
     res_perfis = [("Dominante", self.dominancia), 
                   ("Influente",self.influencia), 
                   ("Cauteloso",self.cautela), 
@@ -38,6 +40,11 @@ class Resultado(models.Model):
       if perfil[1] == res_perfis[0][1]:
         res += perfil[0] + ' '
     return res
+
+  # chama get_resultado_final() e armazena o valor na propriedade resultado_final
+  def save(self, *args, **kwargs): 
+    self.resultado_final = self.get_resultado_final()
+    super(Resultado, self).save(*args, **kwargs)
   
   def __str__(self):
       return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
