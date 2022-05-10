@@ -67,10 +67,15 @@
             </div>
           </td>
           <td>
-            teste
+            testePerfil
           </td>
           <td>
-            teste
+            {%if resultado.aluno.aluno_empregado == False %}
+              <div>Desempregado</div>
+            {% endif %}
+            {%if resultado.aluno.aluno_empregado %}
+              <div>Empregado</div>
+            {% endif %}
           </td>
         </tr>
       {% endfor %}
