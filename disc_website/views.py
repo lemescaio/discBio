@@ -4,6 +4,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from disc_website.forms import PerguntaForm
 from disc_website.models import CHOICES_ALTERNATIVA, Alternativa, Aluno, Pergunta, Resultado, Link
 import pytz
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
+from django.views.decorators.csrf import csrf_protect
 
 utc=pytz.UTC
 
@@ -24,6 +27,7 @@ def pergunta_form(request):
         form = PerguntaForm()
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
 
+@login_required(login_url='/login')
 def resultados(request):
     if request.method == 'POST':
         busca = request.POST['buscaAluno']
@@ -102,9 +106,24 @@ def teste(request, id):
 def obrigado(request, nome):
     return render(request, "disc_website/obrigado.html",
                   {"nome": nome.split()[0]})
-
-def login(request):
-    return render(request, "disc_website/login.html")
+def logout_user(request):
+    logout(request)
+    return render(request, 'disc_website/logout.html')
 
 def handler404(request, exception):
     return render(request, 'disc_website/404.html')
+
+def login_user(request):
+    logout(request)
+    username = password = ''
+    next = request.GET.get('next','/')
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return HttpResponseRedirect(next)
+    return render(request, 'disc_website/login.html', {'next' : next})

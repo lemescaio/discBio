@@ -16,6 +16,7 @@
         <td width="22%">
           <form action="" method="post">
             {% csrf_token %}
+            <input type="hidden" name="next" value="{{ next }}">
             <div class="input-group">
               <div class="form-outline">
                 <input id="search-focus" type="search" id="buscaAluno" name="buscaAluno" class="form-control" placeholder="Buscar Aluno" />
