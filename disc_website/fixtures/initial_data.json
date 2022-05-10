@@ -379,7 +379,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 15,
+        "pk": 7,
         "fields": {
             "pergunta": 2,
             "conteudo": "teimoso, tenaz, combativo",
@@ -388,7 +388,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 7,
+        "pk": 8,
         "fields": {
             "pergunta": 2,
             "conteudo": "doce, complacente",
@@ -397,7 +397,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 8,
+        "pk": 9,
         "fields": {
             "pergunta": 3,
             "conteudo": "fácil de guiar, seguidor",
@@ -406,7 +406,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 9,
+        "pk": 10,
         "fields": {
             "pergunta": 3,
             "conteudo": "direto, desafiador",
@@ -415,7 +415,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 10,
+        "pk": 11,
         "fields": {
             "pergunta": 3,
             "conteudo": "leal, devoto, fiel",
@@ -424,7 +424,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 11,
+        "pk": 12,
         "fields": {
             "pergunta": 3,
             "conteudo": "encantador, faz com que as pessoas gostem",
@@ -433,7 +433,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 12,
+        "pk": 13,
         "fields": {
             "pergunta": 4,
             "conteudo": "mente aberta, receptivo",
@@ -442,7 +442,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 13,
+        "pk": 14,
         "fields": {
             "pergunta": 4,
             "conteudo": "reconhecido pelos demais, gosta de ajudar",
@@ -451,7 +451,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 14,
+        "pk": 15,
         "fields": {
             "pergunta": 4,
             "conteudo": "voluntarioso, carãter forte e decidido",
@@ -460,7 +460,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 15,
+        "pk": 16,
         "fields": {
             "pergunta": 4,
             "conteudo": "alegre, divertido",
@@ -469,7 +469,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 16,
+        "pk": 17,
         "fields": {
             "pergunta": 5,
             "conteudo": "jovial, gosta de alegrar as pessoas",
@@ -478,7 +478,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 17,
+        "pk": 18,
         "fields": {
             "pergunta": 5,
             "conteudo": "preciso, exato",
@@ -487,7 +487,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 18,
+        "pk": 19,
         "fields": {
             "pergunta": 5,
             "conteudo": "decidido, determinado, audaz",
@@ -496,7 +496,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 19,
+        "pk": 20,
         "fields": {
             "pergunta": 5,
             "conteudo": "estável, de temperamento tranquilo, calmo",
@@ -505,7 +505,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 20,
+        "pk": 21,
         "fields": {
             "pergunta": 6,
             "conteudo": "competitivo, busca ganhar",
@@ -514,7 +514,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 21,
+        "pk": 22,
         "fields": {
             "pergunta": 6,
             "conteudo": "carinhoso, tem muito tato",
@@ -523,7 +523,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 22,
+        "pk": 23,
         "fields": {
             "pergunta": 6,
             "conteudo": "extrovertido, gosta de divertir-se",
@@ -532,7 +532,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 23,
+        "pk": 24,
         "fields": {
             "pergunta": 6,
             "conteudo": "harmonioso, busca o acordo",
@@ -541,7 +541,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 24,
+        "pk": 25,
         "fields": {
             "pergunta": 7,
             "conteudo": "exigente, difícil de satisfazer",
@@ -550,7 +550,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 25,
+        "pk": 26,
         "fields": {
             "pergunta": 7,
             "conteudo": "obediente, faz o que lhe pedem que faça, comedido",
@@ -559,7 +559,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 26,
+        "pk": 27,
         "fields": {
             "pergunta": 7,
             "conteudo": "tenaz e decidido, determinado",
@@ -568,7 +568,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 27,
+        "pk": 28,
         "fields": {
             "pergunta": 7,
             "conteudo": "brincalhão, divertido",
@@ -577,7 +577,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 28,
+        "pk": 29,
         "fields": {
             "pergunta": 8,
             "conteudo": "valente, temerário, cheio de coragem",
@@ -586,7 +586,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 29,
+        "pk": 30,
         "fields": {
             "pergunta": 8,
             "conteudo": "inspirador, estimulante, motivador",
@@ -595,7 +595,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 30,
+        "pk": 31,
         "fields": {
             "pergunta": 8,
             "conteudo": "obediente, não confronta, cede facilmente",
@@ -604,7 +604,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 31,
+        "pk": 32,
         "fields": {
             "pergunta": 8,
             "conteudo": "tímido, apreensivo, calado",
@@ -613,7 +613,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 32,
+        "pk": 33,
         "fields": {
             "pergunta": 9,
             "conteudo": "sociável, desfruta da companhia dos outros",
@@ -622,7 +622,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 33,
+        "pk": 34,
         "fields": {
             "pergunta": 9,
             "conteudo": "paciente, estável, tolerante",
@@ -631,7 +631,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 34,
+        "pk": 35,
         "fields": {
             "pergunta": 9,
             "conteudo": "autossuficiente, independente",
@@ -640,7 +640,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 35,
+        "pk": 36,
         "fields": {
             "pergunta": 9,
             "conteudo": "reservado",
@@ -649,7 +649,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 36,
+        "pk": 37,
         "fields": {
             "pergunta": 10,
             "conteudo": "aventureiro, desejoso de arriscar-se",
@@ -658,7 +658,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 37,
+        "pk": 38,
         "fields": {
             "pergunta": 10,
             "conteudo": "receptivo, aberto a sugestões",
@@ -667,7 +667,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 38,
+        "pk": 39,
         "fields": {
             "pergunta": 10,
             "conteudo": "cordial, cálido, amistoso",
@@ -676,7 +676,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 39,
+        "pk": 40,
         "fields": {
             "pergunta": 10,
             "conteudo": "moderado, evita os extremos",
@@ -685,7 +685,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 40,
+        "pk": 41,
         "fields": {
             "pergunta": 11,
             "conteudo": "expressivo, fala muito",
@@ -694,7 +694,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 41,
+        "pk": 42,
         "fields": {
             "pergunta": 11,
             "conteudo": "controlado, pouco expressivo",
@@ -703,7 +703,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 42,
+        "pk": 43,
         "fields": {
             "pergunta": 11,
             "conteudo": "convencional, sistemático, gosta da rotina",
@@ -712,7 +712,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 43,
+        "pk": 44,
         "fields": {
             "pergunta": 11,
             "conteudo": "decidido, certo, firme ao tomar decisões",
@@ -721,7 +721,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 44,
+        "pk": 45,
         "fields": {
             "pergunta": 12,
             "conteudo": "refinado, elegante ao falar",
@@ -730,7 +730,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 45,
+        "pk": 46,
         "fields": {
             "pergunta": 12,
             "conteudo": "busca desafios, assume riscos",
@@ -739,7 +739,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 46,
+        "pk": 47,
         "fields": {
             "pergunta": 12,
             "conteudo": "diplomático, tem tato com as pessoas",
@@ -748,7 +748,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 47,
+        "pk": 48,
         "fields": {
             "pergunta": 12,
             "conteudo": "satisfeito, contente, confortável",
@@ -757,7 +757,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 48,
+        "pk": 49,
         "fields": {
             "pergunta": 13,
             "conteudo": "agressivo, desafiante, enfocado na ação ou objetivo",
@@ -766,7 +766,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 49,
+        "pk": 50,
         "fields": {
             "pergunta": 13,
             "conteudo": "alma da festa, divertido, extrovertido",
@@ -775,7 +775,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 50,
+        "pk": 51,
         "fields": {
             "pergunta": 13,
             "conteudo": "ingênuo, é fácil que se aproveitem dele",
@@ -784,7 +784,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 51,
+        "pk": 52,
         "fields": {
             "pergunta": 13,
             "conteudo": "temeroso, tende a preocupar-se muito",
@@ -793,7 +793,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 52,
+        "pk": 53,
         "fields": {
             "pergunta": 14,
             "conteudo": "cuidadoso, desconfiado, cauteloso",
@@ -802,7 +802,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 53,
+        "pk": 54,
         "fields": {
             "pergunta": 14,
             "conteudo": "determinado, decidido, não desiste, se põe firme",
@@ -811,7 +811,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 54,
+        "pk": 55,
         "fields": {
             "pergunta": 14,
             "conteudo": "convincente, transmite segurança",
@@ -820,7 +820,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 55,
+        "pk": 56,
         "fields": {
             "pergunta": 14,
             "conteudo": "de bom caráter, cortês, gosta de satisfazer os demais",
@@ -829,7 +829,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 56,
+        "pk": 57,
         "fields": {
             "pergunta": 15,
             "conteudo": "entusiasta, se envolve com o que faz",
@@ -838,7 +838,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 57,
+        "pk": 58,
         "fields": {
             "pergunta": 15,
             "conteudo": "impaciente, ansioso, desesperado ás vezes",
@@ -847,7 +847,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 58,
+        "pk": 59,
         "fields": {
             "pergunta": 15,
             "conteudo": "amistoso, consegue acordos, aceita",
@@ -856,7 +856,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 59,
+        "pk": 60,
         "fields": {
             "pergunta": 15,
             "conteudo": "animado, vivaz, entusiasta",
@@ -865,7 +865,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 60,
+        "pk": 61,
         "fields": {
             "pergunta": 16,
             "conteudo": "tem autoconfiança, crê em si mesmo, seguro",
@@ -874,7 +874,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 61,
+        "pk": 62,
         "fields": {
             "pergunta": 16,
             "conteudo": "compreensivo, compassivo, apoiador das pessoas",
@@ -883,7 +883,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 62,
+        "pk": 63,
         "fields": {
             "pergunta": 16,
             "conteudo": "tolerante",
@@ -892,7 +892,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 63,
+        "pk": 64,
         "fields": {
             "pergunta": 16,
             "conteudo": "assertivo, agressivo, direto",
@@ -901,7 +901,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 64,
+        "pk": 65,
         "fields": {
             "pergunta": 17,
             "conteudo": "muito disciplinado, auto controlado",
@@ -910,7 +910,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 65,
+        "pk": 66,
         "fields": {
             "pergunta": 17,
             "conteudo": "generoso, gosta de compartilhar",
@@ -919,7 +919,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 66,
+        "pk": 67,
         "fields": {
             "pergunta": 17,
             "conteudo": "animado, expressivo, usa muitos gestos",
@@ -928,7 +928,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 67,
+        "pk": 68,
         "fields": {
             "pergunta": 17,
             "conteudo": "persistente, não volta atrás, se nega a perder",
@@ -937,7 +937,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 68,
+        "pk": 69,
         "fields": {
             "pergunta": 18,
             "conteudo": "admirável, digno de reconhecimento",
@@ -946,7 +946,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 69,
+        "pk": 70,
         "fields": {
             "pergunta": 18,
             "conteudo": "amável, desejoso de ajudar e de compartilhar",
@@ -955,7 +955,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 70,
+        "pk": 71,
         "fields": {
             "pergunta": 18,
             "conteudo": "resignado, desiste, não luta",
@@ -964,7 +964,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 71,
+        "pk": 72,
         "fields": {
             "pergunta": 18,
             "conteudo": "caráter forte, poderoso",
@@ -973,7 +973,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 72,
+        "pk": 73,
         "fields": {
             "pergunta": 19,
             "conteudo": "respeitoso, trata as pessoas com consideração",
@@ -982,7 +982,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 73,
+        "pk": 74,
         "fields": {
             "pergunta": 19,
             "conteudo": "pioneiro, explorador, inovador",
@@ -991,7 +991,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 74,
+        "pk": 75,
         "fields": {
             "pergunta": 19,
             "conteudo": "otimista, vê o lado positivo de tudo",
@@ -1000,7 +1000,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 75,
+        "pk": 76,
         "fields": {
             "pergunta": 19,
             "conteudo": "se acomoda, complacente, pronto para ajudar",
@@ -1009,7 +1009,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 76,
+        "pk": 77,
         "fields": {
             "pergunta": 20,
             "conteudo": "gosta de discutir, controverso, confrontante",
@@ -1018,7 +1018,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 77,
+        "pk": 78,
         "fields": {
             "pergunta": 20,
             "conteudo": "adaptável, flexível",
@@ -1027,7 +1027,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 78,
+        "pk": 79,
         "fields": {
             "pergunta": 20,
             "conteudo": "relaxado, leva as coisas com calma, tranquilo",
@@ -1036,7 +1036,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 79,
+        "pk": 80,
         "fields": {
             "pergunta": 20,
             "conteudo": "leve, despreocupado, descomplicado",
@@ -1045,7 +1045,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 80,
+        "pk": 81,
         "fields": {
             "pergunta": 21,
             "conteudo": "confia nos demais, tem fé nas pessoas",
@@ -1054,7 +1054,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 81,
+        "pk": 82,
         "fields": {
             "pergunta": 21,
             "conteudo": "contente, satisfeito",
@@ -1063,7 +1063,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 82,
+        "pk": 83,
         "fields": {
             "pergunta": 21,
             "conteudo": "positivo, não admite dúvidas nem temores",
@@ -1072,7 +1072,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 83,
+        "pk": 84,
         "fields": {
             "pergunta": 21,
             "conteudo": "pacífico, tranquilo",
@@ -1081,7 +1081,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 84,
+        "pk": 85,
         "fields": {
             "pergunta": 22,
             "conteudo": "socialmente hábil, gosta de estar com os demais",
@@ -1090,7 +1090,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 85,
+        "pk": 86,
         "fields": {
             "pergunta": 22,
             "conteudo": "educado, culto, conhecedor",
@@ -1099,7 +1099,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 86,
+        "pk": 87,
         "fields": {
             "pergunta": 22,
             "conteudo": "vigoroso, enérgico",
@@ -1108,7 +1108,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 87,
+        "pk": 88,
         "fields": {
             "pergunta": 22,
             "conteudo": "tolerante, pouco exato, compreensivo",
@@ -1117,7 +1117,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 88,
+        "pk": 89,
         "fields": {
             "pergunta": 23,
             "conteudo": "agradável, sua companhia é prazerosa",
@@ -1126,7 +1126,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 89,
+        "pk": 90,
         "fields": {
             "pergunta": 23,
             "conteudo": "exato, correto, preciso",
@@ -1135,7 +1135,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 90,
+        "pk": 91,
         "fields": {
             "pergunta": 23,
             "conteudo": "tem opiniões claras, fala livre e abertamente",
@@ -1144,7 +1144,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 91,
+        "pk": 92,
         "fields": {
             "pergunta": 23,
             "conteudo": "reservado, controlado",
@@ -1153,7 +1153,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 92,
+        "pk": 93,
         "fields": {
             "pergunta": 24,
             "conteudo": "impaciente, não se permite relaxar, não descansa",
@@ -1162,7 +1162,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 93,
+        "pk": 94,
         "fields": {
             "pergunta": 24,
             "conteudo": "sociável, amável",
@@ -1171,7 +1171,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 94,
+        "pk": 95,
         "fields": {
             "pergunta": 24,
             "conteudo": "popular, apreciado por muitas pessoas",
@@ -1180,7 +1180,7 @@
     },
     {
         "model": "disc_website.alternativa",
-        "pk": 95,
+        "pk": 96,
         "fields": {
             "pergunta": 24,
             "conteudo": "ordenado, organizado, claro",
