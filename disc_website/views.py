@@ -55,7 +55,7 @@ def teste(request, id):
     if request.method == "GET":
         link = Link.objects.get(id=id)
         if link.expire_date < datetime.now().replace(tzinfo=utc):
-            return HttpResponseRedirect('/admin')
+            return render(request, 'disc_website/404.html')
 
         for pergunta in Pergunta.objects.filter():
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
