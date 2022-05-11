@@ -69,7 +69,8 @@
             "influencia": 0.0,
             "dominancia": 0.0,
             "cautela": 0.5,
-            "estabilidade": 0.5
+            "estabilidade": 0.5,
+            "resultado_final": "Cauteloso Estável"
         }
     },
     {
@@ -82,7 +83,8 @@
             "influencia": 0.1,
             "dominancia": 0.4,
             "cautela": 0.3,
-            "estabilidade": 0.2
+            "estabilidade": 0.2,
+            "resultado_final": "Dominante"
         }
     },
     {
@@ -95,7 +97,8 @@
             "influencia": 0.25,
             "dominancia": 0.25,
             "cautela": 0.25,
-            "estabilidade": 0.25
+            "estabilidade": 0.25,
+            "resultado_final": "Dominante Cauteloso Influente Estável"
         }
     },
     {
@@ -108,7 +111,8 @@
             "influencia": 0.7,
             "dominancia": 0.3,
             "cautela": 0.0,
-            "estabilidade": 0.0
+            "estabilidade": 0.0,
+            "resultado_final": "Influente"
         }
     },
     {
@@ -121,7 +125,8 @@
             "influencia": 0.0,
             "dominancia": 1.0,
             "cautela": 0.0,
-            "estabilidade": 0.0
+            "estabilidade": 0.0,
+            "resultado_final": "Dominante"
         }
     },
     {
