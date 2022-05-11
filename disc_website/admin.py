@@ -4,7 +4,7 @@ from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Per
 # Register your models here.
 
 class ResultadoAdmin(admin.ModelAdmin):
-    list_display = ('aluno', 'dominancia', 'influencia' ,'cautela', 'estabilidade')
+    list_display = ('aluno', 'dominancia', 'influencia' ,'cautela', 'estabilidade', 'resultado_final')
     search_fields = ('aluno__ra__icontains',)
 
 class AlunoAdmin(admin.ModelAdmin):
