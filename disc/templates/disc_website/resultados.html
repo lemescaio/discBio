@@ -6,14 +6,39 @@
 
   <table class="legendaTable" style="margin: 2%">
       <tr>
-        <td width="74%">
-          <h5 style="display: inline-block">Legenda:</h5>
-          <div class="progress-bar" style="display: inline-block; width: 10%">Dominância</div>
-          <div class="progress-bar bg-success" style="display: inline-block; width: 10%">Influência</div>
-          <div class="progress-bar bg-danger progress-bar-stripped" style="display: inline-block; width: 10%">Cautela</div>
-          <div class="progress-bar bg-warning progress-bar-stx'ripped" style="display: inline-block; width: 10%" >Estabilidade</div>
+        <td width="40%">
+          <h5 style="display: inline-block">Predominância:</h5>
+          <div>
+            <label class="progress-bar " style="display: inline-block; width: 125px; padding: 1%">
+              <input id="dominancia" name="dominancia" type="checkbox"
+                checked="dominancia"> Dominância
+            </label>
+            <label class="progress-bar bg-success" style="display: inline-block; width: 125px; padding: 1%">
+              <input id="influencia" name="influencia" type="checkbox"
+                checked="influencia"> Influência
+            </label>
+            <label class="progress-bar bg-danger progress-bar-stripped" style="display: inline-block; width: 125px; padding: 1%">
+              <input id="cautela" name="cautela" type="checkbox"
+                checked="cautela"> Cautela
+            </label>
+            <label class="progress-bar bg-warning progress-bar-stx'ripped" style="display: inline-block; width: 125px; padding: 1%">
+              <input id="estabilidade" name="estabilidade" type="checkbox"
+                checked="estabilidade"> Estabilidade
+            </label>
+          </div>
         </td>
-        <td width="22%">
+        <td width="25%">
+          <h5>Situação:</h5>
+          <div style="display: inline-block">
+              <label><input id="empregado" name="empregado" type="checkbox"
+                checked="empregado"> Empregado</label>
+          </div>
+          <div style="display: inline-block">
+              <label><input id="desempregado" name="desempregado" type="checkbox"
+                checked="desempregado"> Desempregado</label>
+          </div>
+        </td>
+        <td width="25%">
           <form action="" method="post">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
@@ -28,58 +53,66 @@
           </form>
         </td>
       </tr>
+      <tr>
   </table>
 
-  <table class="table" id="table" >
-    <thead>
-      <tr class="cabecalhoTabela">
-        <td width="25%">Aluno</td>
-        <td width="10%">Data</td>
-        <td width="25%">Resultado</td>
-        <td width="15%">Perfil</td>
-        <td width="15%">Empregado</td>
-      </tr>
-    </thead>
-    <tbody>
-      {% for resultado in resultados %}
-        <tr>
-          <td >{{resultado.aluno.nome}}</td>
-          <td>{{resultado.data_fim | date:"d/m/Y"}}</td>
-          <td>
-            <div class="progress" style="max-width: 80%">
-              <div title="Dominância" class="progress-bar"
-                  style="width: {% widthratio resultado.dominancia 1 100 %}%">
-                  {% widthratio resultado.dominancia 1 100 %}
-              </div>
-              <div title="Influencia" class="progress-bar bg-success"
-                  style="width: {% widthratio resultado.influencia 1 100 %}%">
-                  {% widthratio resultado.influencia 1 100 %}
-              </div>
-              <div title="Cautela" class="progress-bar bg-danger
-                  progress-bar-stripped" style="width: {% widthratio resultado.cautela 1 100 %}%">
-                  {% widthratio resultado.cautela 1 100 %}
-                  
-              </div>
-              <div title="Estabilidade" class="progress-bar bg-warning
-                  progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
-                  {% widthratio resultado.estabilidade 1 100 %}
-              </div>
-            </div>
-          </td>
-          <td>
-            {{resultado.resultado_final}}
-          </td>
-          <td>
-            {%if resultado.aluno.aluno_empregado == False %}
-              <div>Desempregado</div>
-            {% endif %}
-            {%if resultado.aluno.aluno_empregado %}
-              <div>Empregado</div>
-            {% endif %}
-          </td>
-        </tr>
-      {% endfor %}
-      </tbody>
-  </table>
+  <div class="container-fluid">
+      <div class="row clearfix">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr class="cabecalhoTabela">
+                  <td width="25%">Aluno</td>
+                  <td width="10%">Data</td>
+                  <td width="25%">Resultado</td>
+                  <td width="15%">Perfil</td>
+                  <td width="15%">Empregado</td>
+                </tr>
+              </thead>
+              <tbody>
+                {% for resultado in resultados %}
+                  <tr>
+                    <td >{{resultado.aluno.nome}}</td>
+                    <td>{{resultado.data_fim | date:"d/m/Y"}}</td>
+                    <td>
+                      <div class="progress" style="max-width: 80%">
+                        <div title="Dominância" class="progress-bar"
+                            style="width: {% widthratio resultado.dominancia 1 100 %}%">
+                            {% widthratio resultado.dominancia 1 100 %}
+                        </div>
+                        <div title="Influencia" class="progress-bar bg-success"
+                            style="width: {% widthratio resultado.influencia 1 100 %}%">
+                            {% widthratio resultado.influencia 1 100 %}
+                        </div>
+                        <div title="Cautela" class="progress-bar bg-danger
+                            progress-bar-stripped" style="width: {% widthratio resultado.cautela 1 100 %}%">
+                            {% widthratio resultado.cautela 1 100 %}
+
+                        </div>
+                        <div title="Estabilidade" class="progress-bar bg-warning
+                            progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
+                            {% widthratio resultado.estabilidade 1 100 %}
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      {{resultado.resultado_final}}
+                    </td>
+                    <td>
+                      {%if resultado.aluno.aluno_empregado == False %}
+                        <div>Desempregado</div>
+                      {% endif %}
+                      {%if resultado.aluno.aluno_empregado %}
+                        <div>Empregado</div>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 </div>
 {% endblock %}
