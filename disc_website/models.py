@@ -80,10 +80,17 @@ class Alternativa(models.Model):
         self.pergunta.__str__()[:15]+'...',
         self.pergunta.teste.__str__()])
 
+class Universidade(models.Model):
+  nome = models.CharField(max_length=500, blank=False)
+
 class Link(models.Model):
   id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
   expire_date = models.DateTimeField()
+  apelido = models.CharField(max_length=150, blank=False)
+  universidade = models.ForeignKey(Universidade, on_delete=models.CASCADE)
 
   @property
   def link(self):
     return '{}/{}'.format('localhost:8000/teste', str(self.id))
+
+
