@@ -1,5 +1,5 @@
 from django.contrib import admin
-from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Pergunta, Link
+from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Pergunta, Link, Universidade
 
 # Register your models here.
 
@@ -12,7 +12,7 @@ class AlunoAdmin(admin.ModelAdmin):
     search_fields = ('ra_icontains', 'nome_icontains')
 
 class LinkAdmin(admin.ModelAdmin):
-    list_display = ('id', 'expire_date', 'link')
+    list_display = ('id', 'expire_date', 'link', 'apelido')
 
 admin.site.register(Pergunta)
 admin.site.register(Alternativa)
@@ -21,3 +21,4 @@ admin.site.register(Resultado, ResultadoAdmin)
 admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Turma)
 admin.site.register(Link, LinkAdmin)
+admin.site.register(Universidade)
