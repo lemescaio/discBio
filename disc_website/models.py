@@ -49,9 +49,14 @@ class Resultado(models.Model):
   def __str__(self):
       return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
 
+CHOICES_TIPO = (
+  (1,'check-box'),
+  (2,'radio-button'),
+)
 
 class Teste(models.Model):
   nome = models.CharField(max_length=30)
+  tipo = models.IntegerField(choices=CHOICES_TIPO, blank=False)
 
   def __str__(self):
     return self.nome
