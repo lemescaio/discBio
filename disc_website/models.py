@@ -49,9 +49,14 @@ class Resultado(models.Model):
   def __str__(self):
       return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
 
+CHOICES_TIPO = (
+  (1,'check-box'),
+  (2,'radio-button'),
+)
 
 class Teste(models.Model):
   nome = models.CharField(max_length=30)
+  tipo = models.IntegerField(choices=CHOICES_TIPO, blank=False)
 
   def __str__(self):
     return self.nome
@@ -83,10 +88,14 @@ class Alternativa(models.Model):
 class Universidade(models.Model):
   nome = models.CharField(max_length=500, blank=False)
 
+  def __str__(self):
+    return self.nome
+
 class Link(models.Model):
   id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
   expire_date = models.DateTimeField()
   apelido = models.CharField(max_length=150, blank=False)
+  teste = models.ForeignKey(Teste, on_delete=models.CASCADE)
   universidade = models.ForeignKey(Universidade, on_delete=models.CASCADE)
 
   @property
