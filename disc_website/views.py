@@ -58,7 +58,8 @@ def teste(request, id):
             return render(request, 'disc_website/404.html')
 
         for pergunta in Pergunta.objects.filter():
-            perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
+            if pergunta.teste.id == link.teste.id:
+                perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
                       {"perguntas": perguntas_dict, "navbar_teste" : "active"})
     elif request.method == "POST":
