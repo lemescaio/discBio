@@ -4,28 +4,29 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-5 offset-md-5 margin-cabecalho">
-			<img  src="./static/images/imagem-disc.png"/>
+			<img src="./static/images/imagem-disc.png" />
 		</div>
 	</div>
 </div>
+{% if not user.is_authenticated %}
 <div class="align-items-center">
 	<div class="container-fluid">
-	  <div class="row">
-		<div class="col-md-12">
-		  <h3 class="text-center">	
-			  <div class="mt-5">
-				<a href="http://localhost:8000/login/">LOGIN</a>
-			  </div>
-			  <div class="mt-5">
-				<a href="http://localhost:8000/resultados/">Resultados</a>
-			  </div>
-			  <div class="mt-1">
-				<a href="http://localhost:8000/admin/">Admin</a>
-			  </div>
-		  </h3>
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-center">
+					<div class="mt-5">
+						<a href="http://localhost:8000/login/">LOGIN</a>
+					</div>
+					<div class="mt-5">
+						<a href="http://localhost:8000/resultados/">Resultados</a>
+					</div>
+					<div class="mt-1">
+						<a href="http://localhost:8000/admin/">Admin</a>
+					</div>
+				</h3>
+			</div>
 		</div>
-	  </div>
 	</div>
-  </div>
-
+</div>
+{% endif %}
 {% endblock %}
