@@ -30,11 +30,11 @@
       {% for alternativa in alternativas %}
       <div class="col-md-5">
         {% if alternativa.pergunta.teste.tipo == 1 %}
-        <input type="radio" name="{{pergunta}}" id="radio_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)" required>
+        <input type="checkbox" name="{{pergunta}}" id="radio_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)" required>
         <label for="radio_alternativa"> {{alternativa.conteudo}}</label>
         {% endif %}
         {% if alternativa.pergunta.teste.tipo == 2 %}
-        <input type="checkbox" name="{{pergunta}}" id="check_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)">
+        <input type="radio" name="{{pergunta}}" id="check_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)">
         <label for="check_alternativa"> {{alternativa.conteudo}}</label>
         {% endif %}
         <br>
