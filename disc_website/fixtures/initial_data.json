@@ -133,7 +133,8 @@
         "model": "disc_website.teste",
         "pk": 1,
         "fields": {
-            "nome": "Análise de Perfil (DISC)"
+            "nome": "Análise de Perfil (DISC)",
+            "tipo": 1
         }
     },
     {
