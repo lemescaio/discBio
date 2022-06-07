@@ -6,17 +6,25 @@
     <h1 class="text-center titulo-disc-teste">Formulário Teste DISC</h1>
     <div class="container-fluid margin-cabecalho">
       <div class="row">
-        <div class="input-group col-md-4 margin-cabecalho">
+        <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">Nome:</span>
-          <input type="text" aria-label="First name" class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome">
+          <input type="text"class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome">
         </div>
-        <div class="input-group col-md-4 margin-cabecalho">
+        <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">E-mail:</span>
-          <input id="email" type="text" placeholder="Digite seu E-mail" name="email" aria-label="First name" class="form-control">
+          <input id="email" type="text" placeholder="Digite seu E-mail" name="email" class="form-control">
         </div>
-        <div class="input-group col-md-4 margin-cabecalho">
+        <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">RA:</span>
-          <input id="ra" type="text" placeholder="Digite seu RA" name="ra" aria-label="First name" class="form-control">
+          <input id="ra" type="text" placeholder="Digite seu RA" name="ra" class="form-control">
+        </div>
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">Situação:</span>
+          <select  class="form-control" id="aluno_empregado" name="aluno_empregado">
+            <option hidden value='0'>Informe sua situação atual</option>
+            <option value='1'>Empregado</option>
+            <option value='2'>Disponível</option>
+          </select>
         </div>
       </div>
     </div>

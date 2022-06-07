@@ -62,7 +62,7 @@ def teste(request, id):
         return render(request, "disc_website/teste.html",
                       {"perguntas": perguntas_dict, "navbar_teste" : "active"})
     elif request.method == "POST":
-        if len(request.POST) == 28:
+        if len(request.POST) > 0:
             totalRespostas = 0
             respostas_dict = {
                 "1" : 0,
@@ -73,12 +73,16 @@ def teste(request, id):
             ra = request.POST["ra"]
             email = request.POST["email"]
             nome = request.POST["nome"]
+            aluno_empregado = False
+            if request.POST["aluno_empregado"] == '1':
+                aluno_empregado = True
+            
 
             for chave, conteudo in request.POST.items():
-                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
+                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
                     respostas_dict[conteudo[0]] += 1
                     totalRespostas += 1
-        
+
             for chave, conteudo in respostas_dict.items():
                 respostas_dict[chave] = respostas_dict[chave] / totalRespostas
                 
@@ -90,7 +94,8 @@ def teste(request, id):
                 aluno.ra = ra
                 aluno.nome = nome
                 aluno.email = email
-                aluno.save()
+            aluno.aluno_empregado = aluno_empregado
+            aluno.save()
                 
             resultado = Resultado()
             for choice, nome in CHOICES_ALTERNATIVA:
