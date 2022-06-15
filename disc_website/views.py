@@ -63,9 +63,13 @@ def teste(request, id):
         return render(request, "disc_website/teste.html",
                       {"perguntas": perguntas_dict, "navbar_teste" : "active"})
     elif request.method == "POST":
+
         ra = request.POST["ra"]
         email = request.POST["email"]
         nome = request.POST["nome"]
+        aluno_empregado = False
+        if request.POST["aluno_empregado"] == '1':
+            aluno_empregado = True
 
         if ra == "":
             retornos = "Campo RA não informado."
@@ -103,7 +107,7 @@ def teste(request, id):
 
                 for chave, conteudo in request.POST.items():
 
-                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
+                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
                         respostas_dict[conteudo[0]] += 1
                         totalRespostas += 1
 
@@ -119,7 +123,8 @@ def teste(request, id):
                     aluno.ra = ra
                     aluno.nome = nome
                     aluno.email = email
-                    aluno.save()
+                aluno.aluno_empregado = aluno_empregado
+                aluno.save()
 
                 resultado = Resultado()
                 for choice, nome in CHOICES_ALTERNATIVA:
@@ -134,7 +139,6 @@ def teste(request, id):
             retorno = "Responder todas as perguntas."
             return render(request, "disc_website/teste.html",
                           {"retorno": retorno, "navbar_teste": "active"})
-
 
 def obrigado(request, nome):
     return render(request, "disc_website/obrigado.html",
