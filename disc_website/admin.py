@@ -1,5 +1,6 @@
 from django.contrib import admin
 from disc_website.models import Alternativa, Aluno, Resultado, Teste, Turma, Pergunta, Link, Universidade
+from django.utils.html import format_html
 
 # Register your models here.
 
@@ -12,7 +13,10 @@ class AlunoAdmin(admin.ModelAdmin):
     search_fields = ('ra_icontains', 'nome_icontains')
 
 class LinkAdmin(admin.ModelAdmin):
-    list_display = ('id', 'expire_date', 'link', 'apelido')
+    list_display = ('id', 'expire_date', 'Link', 'apelido')
+
+    def Link(self, obj):
+        return format_html(obj.link)
 
 admin.site.register(Pergunta)
 admin.site.register(Alternativa)
