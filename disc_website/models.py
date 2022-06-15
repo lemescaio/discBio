@@ -100,6 +100,6 @@ class Link(models.Model):
 
   @property
   def link(self):
-    return '{}/{}'.format('localhost:8000/teste', str(self.id))
+    return '<a href="/teste/{}" target=_blank>Link</a>'.format(str(self.id))
 
 
