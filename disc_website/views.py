@@ -72,6 +72,9 @@ def teste(request, id):
         ra = request.POST["ra"]
         email = request.POST["email"]
         nome = request.POST["nome"]
+        aluno_empregado = False
+        if request.POST["aluno_empregado"] == '1':
+            aluno_empregado = True
 
         form = UserCreationForm(request.POST or None)
         if form.is_valid():
@@ -97,23 +100,22 @@ def teste(request, id):
 
                     for chave, conteudo in request.POST.items():
 
-                        if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
+                        if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
                             respostas_dict[conteudo[0]] += 1
                             totalRespostas += 1
-
 
                     for chave, conteudo in respostas_dict.items():
                         respostas_dict[chave] = respostas_dict[chave] / totalRespostas
 
                     try:
                         aluno = Aluno.objects.get(ra=ra)
-
                     except Aluno.DoesNotExist:
                         aluno = Aluno()
                         aluno.ra = ra
                         aluno.nome = nome
                         aluno.email = email
-                        aluno.save()
+                    aluno.aluno_empregado = aluno_empregado
+                    aluno.save()
 
                     resultado = Resultado()
                     for choice, nome in CHOICES_ALTERNATIVA:
@@ -144,11 +146,9 @@ def teste(request, id):
             if nome == "":
                 retorno = "Campo nome não informado."
 
-
             #retorno = "Responder todas as perguntas."
             return render(request, "disc_website/teste.html",
                           {"retorno": retorno, "perguntas": perguntas_dict, "form": form, "respostas": respostas,"navbar_teste": "active"})
-
 
 def obrigado(request, nome):
     return render(request, "disc_website/obrigado.html",
