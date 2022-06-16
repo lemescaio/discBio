@@ -1,6 +1,10 @@
 from datetime import datetime
+
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
+from pyexpat.errors import messages
+
 from disc_website.forms import PerguntaForm
 from disc_website.models import CHOICES_ALTERNATIVA, Alternativa, Aluno, Pergunta, Resultado, Link
 import pytz
@@ -62,6 +66,7 @@ def teste(request, id):
             perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
         return render(request, "disc_website/teste.html",
                       {"perguntas": perguntas_dict, "navbar_teste" : "active"})
+
     elif request.method == "POST":
 
         ra = request.POST["ra"]
@@ -71,74 +76,79 @@ def teste(request, id):
         if request.POST["aluno_empregado"] == '1':
             aluno_empregado = True
 
-        if ra == "":
-            retornos = "Campo RA não informado."
-            return render(request, "disc_website/teste.html",
-                      {"retorno": retornos, "navbar_teste": "active"})
+        form = UserCreationForm(request.POST or None)
+        if form.is_valid():
 
-        if email == "":
-            retornos = "Campo email não informado."
-            return render(request, "disc_website/teste.html",
-                      {"retorno": retornos, "navbar_teste": "active"})
+            listaPerguntasResp = []
+            for chave, conteudo in request.POST.items():
+                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
+                    listaPerguntasResp.append(chave)
+            l = [x.split('__')[0] for x in listaPerguntasResp]
 
-        if nome == "":
-            retorno = "Campo nome não informado."
-            return render(request, "disc_website/teste.html",
-                          {"retorno": retorno, "navbar_teste": "active"})
+            perguntasTest = Pergunta.objects.filter(teste_id=link.teste.id).exclude(id__in = l)
 
-        listaPerguntasResp = []
-        for chave, conteudo in request.POST.items():
-            if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
-                listaPerguntasResp.append(chave)
-        l = [x.split('__')[0] for x in listaPerguntasResp]
+            if not perguntasTest:
 
-        perguntasTest = Pergunta.objects.filter(teste_id=link.teste.id).exclude(id__in = l)
+                if len(request.POST) > 0:
+                    totalRespostas = 0
+                    respostas_dict = {
+                        "1" : 0,
+                        "2" : 0,
+                        "3" : 0,
+                        "4" : 0,
+                    }
 
-        if not perguntasTest:
+                    for chave, conteudo in request.POST.items():
 
-            if len(request.POST) > 0:
-                totalRespostas = 0
-                respostas_dict = {
-                    "1" : 0,
-                    "2" : 0,
-                    "3" : 0,
-                    "4" : 0,
-                }
+                        if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
+                            respostas_dict[conteudo[0]] += 1
+                            totalRespostas += 1
 
-                for chave, conteudo in request.POST.items():
+                    for chave, conteudo in respostas_dict.items():
+                        respostas_dict[chave] = respostas_dict[chave] / totalRespostas
 
-                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
-                        respostas_dict[conteudo[0]] += 1
-                        totalRespostas += 1
+                    try:
+                        aluno = Aluno.objects.get(ra=ra)
+                    except Aluno.DoesNotExist:
+                        aluno = Aluno()
+                        aluno.ra = ra
+                        aluno.nome = nome
+                        aluno.email = email
+                    aluno.aluno_empregado = aluno_empregado
+                    aluno.save()
 
+                    resultado = Resultado()
+                    for choice, nome in CHOICES_ALTERNATIVA:
+                        setattr(resultado, nome, respostas_dict[str(choice)])
 
-                for chave, conteudo in respostas_dict.items():
-                    respostas_dict[chave] = respostas_dict[chave] / totalRespostas
+                    resultado.data_fim = resultado.data_ini = datetime.now()
+                    resultado.aluno = aluno
+                    resultado.save()
 
-                try:
-                    aluno = Aluno.objects.get(ra=ra)
-
-                except Aluno.DoesNotExist:
-                    aluno = Aluno()
-                    aluno.ra = ra
-                    aluno.nome = nome
-                    aluno.email = email
-                aluno.aluno_empregado = aluno_empregado
-                aluno.save()
-
-                resultado = Resultado()
-                for choice, nome in CHOICES_ALTERNATIVA:
-                    setattr(resultado, nome, respostas_dict[str(choice)])
-
-                resultado.data_fim = resultado.data_ini = datetime.now()
-                resultado.aluno = aluno
-                resultado.save()
-
-                return HttpResponseRedirect("/obrigado/{}".format(aluno.nome))
+                    return HttpResponseRedirect("/obrigado/{}".format(aluno.nome))
+            messages.error(request, form.errors)
         else:
-            retorno = "Responder todas as perguntas."
+            form = request.POST
+            respostas=[]
+            for pergunta in Pergunta.objects.filter(teste_id=link.teste.id):
+                perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
+
+            for chave, conteudo in request.POST.items():
+                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome']:
+                    respostas.append(int(conteudo))
+
+            if ra == "":
+                retorno = "Campo RA não informado."
+
+            if email == "":
+                retorno = "Campo email não informado."
+
+            if nome == "":
+                retorno = "Campo nome não informado."
+
+            #retorno = "Responder todas as perguntas."
             return render(request, "disc_website/teste.html",
-                          {"retorno": retorno, "navbar_teste": "active"})
+                          {"retorno": retorno, "perguntas": perguntas_dict, "form": form, "respostas": respostas,"navbar_teste": "active"})
 
 def obrigado(request, nome):
     return render(request, "disc_website/obrigado.html",
