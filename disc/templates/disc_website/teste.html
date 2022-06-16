@@ -30,11 +30,14 @@
       {% for alternativa in alternativas %}
       <div class="col-md-5">
         {% if alternativa.pergunta.teste.tipo == 1 %}
-        <input type="checkbox" name="{{alternativa.pergunta.id}}__{{alternativa.id}}__{{alternativa.perfil}}" id="{{alternativa.id}}__{{alternativa.perfil}}" value="{{alternativa.perfil}}" onclick="Check(this)" >
+        <input type="checkbox" name="{{alternativa.pergunta.id}}__{{alternativa.id}}__{{alternativa.perfil}}" id="{{alternativa.id}}__{{alternativa.perfil}}" value="{{alternativa.id}}" onclick="Check(this)"
+               {% if alternativa.id in respostas %}
+                  checked = true
+               {% endif %}>
         <label for="{{alternativa.id}}__{{alternativa.perfil}}"> {{alternativa.conteudo}}</label>
         {% endif %}
         {% if alternativa.pergunta.teste.tipo == 2 %}
-        <input type="radio" name="{{alternativa.pergunta.id}}" id="radio_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)" required>
+        <input type="radio" name="{{alternativa.pergunta.id}}" id="radio_alternativa" value="{{alternativa.id}}" onclick="Check(this)" required>
         <label for="radio_alternativa"> {{alternativa.conteudo}}</label>
         {% endif %}
         <br>
@@ -42,14 +45,15 @@
       {% endfor %}
     </filedset>
     {% endfor %}
-    <div>
-      {{retorno}}
-    </div>
+
     <div class="col-md-4 offset-md-4 margin-cabecalho">
       <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" >Enviar</button>
     </div>
   </div>
 </form>
+    <div>
+      {{retorno}}
+    </div>
 </div>
 <!--<script src="/static/js/javascript.js"></script>-->
 {% endblock %}
