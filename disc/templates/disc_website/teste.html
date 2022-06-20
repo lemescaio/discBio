@@ -8,22 +8,30 @@
       <div class="row">
         <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">Nome:</span>
-          <input type="text"class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome">
+          <input type="text"class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome" value="{{aluno.nome}}">
         </div>
         <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">E-mail:</span>
-          <input id="email" type="text" placeholder="Digite seu E-mail" name="email" class="form-control">
+          <input id="email" type="text" placeholder="Digite seu E-mail" name="email" class="form-control" value="{{aluno.email}}">
         </div>
         <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">RA:</span>
-          <input id="ra" type="text" placeholder="Digite seu RA" name="ra" class="form-control">
+          <input id="ra" type="text" placeholder="Digite seu RA" name="ra" class="form-control" value="{{aluno.ra}}">
         </div>
         <div class="input-group col-md-3 margin-cabecalho">
           <span class="input-group-text">Situação:</span>
           <select  class="form-control" id="aluno_empregado" name="aluno_empregado">
             <option hidden value='0'>Informe sua situação atual</option>
-            <option value='1'>Empregado</option>
-            <option value='2'>Disponível</option>
+            <option value='1'
+                    {%if aluno.aluno_empregado %}
+                      selected
+                    {% endif %}>Empregado
+            </option>
+            <option value='2'
+                    {%if aluno.aluno_empregado == False %}
+                      selected
+                    {% endif %}>Disponível
+            </option>
           </select>
         </div>
       </div>
@@ -38,14 +46,17 @@
       {% for alternativa in alternativas %}
       <div class="col-md-5">
         {% if alternativa.pergunta.teste.tipo == 1 %}
-        <input type="checkbox" name="{{alternativa.pergunta.id}}__{{alternativa.id}}__{{alternativa.perfil}}" id="{{alternativa.id}}__{{alternativa.perfil}}" value="{{alternativa.id}}" onclick="Check(this)"
+        <input type="checkbox" name="{{alternativa.pergunta.id}}__{{alternativa.id}}__{{alternativa.perfil}}" id="{{alternativa.id}}__{{alternativa.perfil}}" value="{{alternativa.perfil}}" onclick="Check(this)"
                {% if alternativa.id in respostas %}
                   checked = true
                {% endif %}>
         <label for="{{alternativa.id}}__{{alternativa.perfil}}"> {{alternativa.conteudo}}</label>
         {% endif %}
         {% if alternativa.pergunta.teste.tipo == 2 %}
-        <input type="radio" name="{{alternativa.pergunta.id}}" id="radio_alternativa" value="{{alternativa.id}}" onclick="Check(this)" required>
+        <input type="radio" name="{{alternativa.pergunta.id}}" id="radio_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)" required
+               {% if alternativa.id in respostas %}
+                  checked = true
+               {% endif %}>
         <label for="radio_alternativa"> {{alternativa.conteudo}}</label>
         {% endif %}
         <br>
@@ -53,15 +64,14 @@
       {% endfor %}
     </filedset>
     {% endfor %}
-
+    <div align="center" id="retorno" style="color: red">
+      {{retorno}}
+    </div>
     <div class="col-md-4 offset-md-4 margin-cabecalho">
-      <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" >Enviar</button>
+      <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar</button>
     </div>
   </div>
 </form>
-    <div>
-      {{retorno}}
-    </div>
 </div>
-<!--<script src="/static/js/javascript.js"></script>-->
+<script src="/static/js/javascript.js"></script>
 {% endblock %}
