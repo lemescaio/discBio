@@ -12,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
 
+import csv
+
 utc=pytz.UTC
 
 # Create your views here.
@@ -30,6 +32,34 @@ def pergunta_form(request):
     else:
         form = PerguntaForm()
     return render(request, 'disc_website/pergunta_form.html', {'form': form})
+
+@login_required(login_url='/login')
+def resultados_csv(request):
+    resultados = Resultado.objects.all()
+    
+    headers = ['Aluno', 'Data', 'Dominancia', 'Influência', 'Cautela', 'Estabilidade', 'Resultado final', 'Empregado?']
+    data    = []
+
+    for resultado in resultados:
+        data.append(tuple([resultado.aluno.nome, 
+                            resultado.data_fim.strftime("%m/%d/%Y %H:%M:%S"), 
+                            str(resultado.dominancia*100)+'%',
+                            str(resultado.influencia*100)+'%',
+                            str(resultado.cautela*100)+'%',
+                            str(resultado.estabilidade*100)+'%',
+                            resultado.resultado_final,
+                            'Sim' if resultado.aluno.aluno_empregado else 'Não']
+                        ))
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename=resultados.csv; enconding=UTF-8;'
+
+    writer = csv.writer(response, dialect='excel', delimiter=',')
+    writer.writerow(headers)
+    for d in data:
+        writer.writerow(d)
+
+    return response
 
 @login_required(login_url='/login')
 def resultados(request):
