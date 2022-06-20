@@ -27,7 +27,7 @@
             </label>
           </div>
         </td>
-        <td width="25%">
+        <td width="20%">
           <h5>Situação:</h5>
           <div style="display: inline-block">
               <label><input id="empregado" name="empregado" type="checkbox"
@@ -38,7 +38,7 @@
                 checked="desempregado"> Desempregado</label>
           </div>
         </td>
-        <td width="25%">
+        <td width="20%">
           <form action="" method="post">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
@@ -51,6 +51,9 @@
               </button>
             </div>
           </form>
+        </td>
+        <td width="20%">
+          <a class="btn btn-primary" role="button" href="/resultados_csv">Baixar CSV</a>
         </td>
       </tr>
       <tr>
