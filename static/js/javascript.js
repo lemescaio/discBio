@@ -4,15 +4,23 @@ function Check(el) {
     var TBnome = document.getElementById("nome");
     var TBemail = document.getElementById("email");
     var TAluno_empregado = document.getElementById('aluno_empregado').value;
-    var nbr_checked_radios = document.querySelectorAll('input[type=radio]:checked').length;
 
-  if (TBra.value === "" || TBnome.value === "" || TBemail.value === "" || TAluno_empregado === '0') {
-    alert(TAluno_empregado);
+    if (TBra.value === "" || TBnome.value === "" || TBemail.value === "" || TAluno_empregado === '0') {
       alert("Preencha seu nome, e-mail, RA e Situação");
     }
-    if (nbr_checked_radios!==24 || TBra.value === "" || TBnome.value === "" || TBemail.value === "" || TAluno_empregado === '0') {
+    if (TBra.value === "" || TBnome.value === "" || TBemail.value === "" || TAluno_empregado === '0') {
       button.disabled = true;
     } else {
       button.disabled = false;
     }
-  }
+}
+
+function Retorno(el) {
+
+    var TBretorno = document.getElementById("retorno");
+
+    if (TBretorno === "****Responder todas as perguntas****") {
+      alert("Responda todas as perguntas!");
+    }
+
+}
