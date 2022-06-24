@@ -1,11 +1,11 @@
-body {
+/* body {
     background: url("/static/images/biopark.png");
     background-repeat: no-repeat;
     background-position: 98% 0%;
     background-size: 200px;
     background-attachment: scroll;
     background-color: rgb(240, 238, 238);
-}
+} */
 
 .titulo-disc-teste {
     margin-top: 2%;
@@ -39,4 +39,17 @@ body {
 
 .p-3 {
     padding: $spacer !important;
+}
+
+#title-container{
+    width: 98vw;
+    margin: 1rem 0;
+    margin-left: 0.9vw;
+}
+.table-results >tbody >tr >td{
+    vertical-align: middle;
+}
+.input-group > :last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
