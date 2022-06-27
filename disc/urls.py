@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pergunta_form/', views.pergunta_form, name='pergunta_form'),
     path('resultados/', views.resultados, name='resultados'),
+    path('resultados_csv/', views.resultados_csv),
     path("teste/<uuid:id>", views.teste, name="teste"),
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),

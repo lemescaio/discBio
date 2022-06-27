@@ -1,118 +1,163 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-<div id="div-teste" class="col-md-12">
-  <h1 class="text-center">Resultados DISC</h1>
-</div>
 
-  <table class="legendaTable" style="margin: 2%">
-      <tr>
-        <td width="40%">
-          <h5 style="display: inline-block">Predominância:</h5>
-          <div>
-            <label class="progress-bar " style="display: inline-block; width: 125px; padding: 1%">
-              <input id="dominancia" name="dominancia" type="checkbox"
-                checked="dominancia"> Dominância
-            </label>
-            <label class="progress-bar bg-success" style="display: inline-block; width: 125px; padding: 1%">
-              <input id="influencia" name="influencia" type="checkbox"
-                checked="influencia"> Influência
-            </label>
-            <label class="progress-bar bg-danger progress-bar-stripped" style="display: inline-block; width: 125px; padding: 1%">
-              <input id="cautela" name="cautela" type="checkbox"
-                checked="cautela"> Cautela
-            </label>
-            <label class="progress-bar bg-warning progress-bar-stx'ripped" style="display: inline-block; width: 125px; padding: 1%">
-              <input id="estabilidade" name="estabilidade" type="checkbox"
-                checked="estabilidade"> Estabilidade
-            </label>
-          </div>
-        </td>
-        <td width="25%">
-          <h5>Situação:</h5>
-          <div style="display: inline-block">
-              <label><input id="empregado" name="empregado" type="checkbox"
-                checked="empregado"> Empregado</label>
-          </div>
-          <div style="display: inline-block">
-              <label><input id="desempregado" name="desempregado" type="checkbox"
-                checked="desempregado"> Desempregado</label>
-          </div>
-        </td>
-        <td width="25%">
-          <form action="" method="post">
+  <div id="title-container" class="container-fuild">
+    <div class="row">
+      <div class="col"><h1 class="text-start">Resultados</h1></div>
+      <div class="col d-flex align-items-center justify-content-end">
+        <a class="btn btn-primary" role="button" href="/resultados_csv">Baixar CSV</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <aside class="options-container col col-12 col-md-3">
+
+        <h3>Filtros</h3>
+
+        <div class="search-container">
+          <form action="" method="post" >
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}">
-            <div class="input-group">
-              <div class="form-outline">
-                <input id="search-focus" type="search" id="buscaAluno" name="buscaAluno" class="form-control" placeholder="Buscar Aluno" />
-              </div>
-              <button type="submit" class="btn btn-primary btn-lg" >
+            <div class="input-group mb-3">
+              <input id="search-focus" type="text" id="buscaAluno" name="buscaAluno" class="form-control" placeholder="Buscar Aluno">
+              <button type="submit" class="btn btn-outline-primary btn-lg">
                 <i class="bi-search" ></i>
               </button>
             </div>
           </form>
-        </td>
-      </tr>
-      <tr>
-  </table>
+        </div>
 
-  <div class="container-fluid">
-      <div class="row clearfix">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped table-hover">
-              <thead>
-                <tr class="cabecalhoTabela">
-                  <td width="25%">Aluno</td>
-                  <td width="10%">Data</td>
-                  <td width="25%">Resultado</td>
-                  <td width="15%">Perfil</td>
-                  <td width="15%">Empregado</td>
-                </tr>
-              </thead>
-              <tbody>
-                {% for resultado in resultados %}
-                  <tr>
-                    <td >{{resultado.aluno.nome}}</td>
-                    <td>{{resultado.data_fim | date:"d/m/Y"}}</td>
-                    <td>
-                      <div class="progress" style="max-width: 80%">
-                        <div title="Dominância" class="progress-bar"
-                            style="width: {% widthratio resultado.dominancia 1 100 %}%">
-                            {% widthratio resultado.dominancia 1 100 %}
-                        </div>
-                        <div title="Influencia" class="progress-bar bg-success"
-                            style="width: {% widthratio resultado.influencia 1 100 %}%">
-                            {% widthratio resultado.influencia 1 100 %}
-                        </div>
-                        <div title="Cautela" class="progress-bar bg-danger
-                            progress-bar-stripped" style="width: {% widthratio resultado.cautela 1 100 %}%">
-                            {% widthratio resultado.cautela 1 100 %}
-
-                        </div>
-                        <div title="Estabilidade" class="progress-bar bg-warning
-                            progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
-                            {% widthratio resultado.estabilidade 1 100 %}
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      {{resultado.resultado_final}}
-                    </td>
-                    <td>
-                      {%if resultado.aluno.aluno_empregado == False %}
-                        <div>Desempregado</div>
-                      {% endif %}
-                      {%if resultado.aluno.aluno_empregado %}
-                        <div>Empregado</div>
-                      {% endif %}
-                    </td>
-                  </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+        <div class="filters-container">
+          <h5>Situação:</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="empregado" name="empregado" checked="empregado">
+            <label class="form-check-label" for="empregado">
+              Empregado
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" id="desempregado" name="desempregado" type="checkbox" checked="desempregado">
+            <label class="form-check-label" for="desempregado">
+              Desempregado
+            </label>
           </div>
         </div>
-      </div>
-</div>
+
+      </aside>
+
+      {% comment %} <table class="legendaTable" style="margin: 2%">
+          <tr>
+            <td width="40%">
+              <h5 style="display: inline-block">Predominância:</h5>
+              <div>
+                <label class="progress-bar " style="display: inline-block; width: 125px; padding: 1%">
+                  <input id="dominancia" name="dominancia" type="checkbox"
+                    checked="dominancia"> Dominância
+                </label>
+                <label class="progress-bar bg-success" style="display: inline-block; width: 125px; padding: 1%">
+                  <input id="influencia" name="influencia" type="checkbox"
+                    checked="influencia"> Influência
+                </label>
+                <label class="progress-bar bg-danger progress-bar-stripped" style="display: inline-block; width: 125px; padding: 1%">
+                  <input id="cautela" name="cautela" type="checkbox"
+                    checked="cautela"> Cautela
+                </label>
+                <label class="progress-bar bg-warning progress-bar-stx'ripped" style="display: inline-block; width: 125px; padding: 1%">
+                  <input id="estabilidade" name="estabilidade" type="checkbox"
+                    checked="estabilidade"> Estabilidade
+                </label>
+              </div>
+            </td>
+            <td width="20%">
+              <h5>Situação:</h5>
+              <div style="display: inline-block">
+                  <label><input id="empregado" name="empregado" type="checkbox"
+                    checked="empregado"> Empregado</label>
+              </div>
+              <div style="display: inline-block">
+                  <label><input id="desempregado" name="desempregado" type="checkbox"
+                    checked="desempregado"> Desempregado</label>
+              </div>
+            </td>
+            <td width="20%">
+              <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                <div class="input-group">
+                  <div class="form-outline">
+                    <input id="search-focus" type="search" id="buscaAluno" name="buscaAluno" class="form-control" placeholder="Buscar Aluno" />
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg" >
+                    <i class="bi-search" ></i>
+                  </button>
+                </div>
+              </form>
+            </td>
+            <td width="20%">
+              <a class="btn btn-primary" role="button" href="/resultados_csv">Baixar CSV</a>
+            </td>
+          </tr>
+          <tr>
+      </table> {% endcomment %}
+
+      <main class="col col-12 col-md-9">
+        <div class="table-responsive">
+          <table class="table-results table table-bordered table-striped table-hover">
+            <thead>
+              <tr class="cabecalhoTabela">
+                <td width="30%">Aluno</td>
+                <td>Data</td>
+                <td width="30%">Resultado</td>
+                <td>Perfil</td>
+                <td>Empregado?</td>
+              </tr>
+            </thead>
+            <tbody>
+            {% for resultado in resultados %}
+              <tr>
+                <td >{{resultado.aluno.nome}}</td>
+                <td>{{resultado.data_fim | date:"d/m/Y"}}</td>
+                <td>
+                  <div class="progress" style="max-width: 100%">
+                    <div title="Dominância" class="progress-bar"
+                            style="width: {% widthratio resultado.dominancia 1 100 %}%">
+                            {% widthratio resultado.dominancia 1 100 %}%
+                    </div>
+                    <div title="Influencia" class="progress-bar bg-success"
+                            style="width: {% widthratio resultado.influencia 1 100 %}%">
+                            {% widthratio resultado.influencia 1 100 %}%
+                    </div>
+                    <div title="Cautela" class="progress-bar bg-danger
+                            progress-bar-stripped" style="width: {% widthratio resultado.cautela 1 100 %}%">
+                            {% widthratio resultado.cautela 1 100 %}%
+
+                    </div>
+                    <div title="Estabilidade" class="progress-bar bg-warning
+                            progress-bar-stx'ripped" style="width: {% widthratio resultado.estabilidade 1 100 %}%">
+                            {% widthratio resultado.estabilidade 1 100 %}%
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  {{resultado.resultado_final}}
+                </td>
+                <td class="text-center">
+                  {%if resultado.aluno.aluno_empregado == False %}
+                  <i class="bi bi-x-lg text-danger" data-bs-toggle="tooltip" title="Desempregado"></i>
+                  {% endif %}
+                  {%if resultado.aluno.aluno_empregado %}
+                  <i class="bi bi-check-lg text-success" data-bs-toggle="tooltip" title="Empregado"></i>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
 {% endblock %}
