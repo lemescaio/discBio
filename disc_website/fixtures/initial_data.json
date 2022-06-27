@@ -767,7 +767,7 @@
   "model": "disc_website.teste",
   "pk": 1,
   "fields": {
-    "nome": "An▀lise de Perfil (DISC)",
+    "nome": "Análise de Perfil (DISC)",
     "tipo": 1
   }
 },
@@ -776,7 +776,7 @@
   "pk": 1,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 1"
+    "enunciado": "Questão 1"
   }
 },
 {
@@ -784,7 +784,7 @@
   "pk": 2,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 2"
+    "enunciado": "Questão 2"
   }
 },
 {
@@ -792,7 +792,7 @@
   "pk": 3,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 3"
+    "enunciado": "Questão 3"
   }
 },
 {
@@ -800,7 +800,7 @@
   "pk": 4,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 4"
+    "enunciado": "Questão 4"
   }
 },
 {
@@ -808,7 +808,7 @@
   "pk": 5,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 5"
+    "enunciado": "Questão 5"
   }
 },
 {
@@ -816,7 +816,7 @@
   "pk": 6,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 6"
+    "enunciado": "Questão 6"
   }
 },
 {
@@ -824,7 +824,7 @@
   "pk": 7,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 7"
+    "enunciado": "Questão 7"
   }
 },
 {
@@ -832,7 +832,7 @@
   "pk": 8,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 8"
+    "enunciado": "Questão 8"
   }
 },
 {
@@ -840,7 +840,7 @@
   "pk": 9,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 9"
+    "enunciado": "Questão 9"
   }
 },
 {
@@ -848,7 +848,7 @@
   "pk": 10,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 10"
+    "enunciado": "Questão 10"
   }
 },
 {
@@ -856,7 +856,7 @@
   "pk": 11,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 11"
+    "enunciado": "Questão 11"
   }
 },
 {
@@ -864,7 +864,7 @@
   "pk": 12,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 12"
+    "enunciado": "Questão 12"
   }
 },
 {
@@ -872,7 +872,7 @@
   "pk": 13,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 13"
+    "enunciado": "Questão 13"
   }
 },
 {
@@ -880,7 +880,7 @@
   "pk": 14,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 14"
+    "enunciado": "Questão 14"
   }
 },
 {
@@ -888,7 +888,7 @@
   "pk": 15,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 15"
+    "enunciado": "Questão 15"
   }
 },
 {
@@ -896,7 +896,7 @@
   "pk": 16,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 16"
+    "enunciado": "Questão 16"
   }
 },
 {
@@ -904,7 +904,7 @@
   "pk": 17,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 17"
+    "enunciado": "Questão 17"
   }
 },
 {
@@ -912,7 +912,7 @@
   "pk": 18,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 18"
+    "enunciado": "Questão 18"
   }
 },
 {
@@ -920,7 +920,7 @@
   "pk": 19,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 19"
+    "enunciado": "Questão 19"
   }
 },
 {
@@ -928,7 +928,7 @@
   "pk": 20,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 20"
+    "enunciado": "Questão 20"
   }
 },
 {
@@ -936,7 +936,7 @@
   "pk": 21,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 21"
+    "enunciado": "Questão 21"
   }
 },
 {
@@ -944,7 +944,7 @@
   "pk": 22,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 22"
+    "enunciado": "Questão 22"
   }
 },
 {
@@ -952,7 +952,7 @@
   "pk": 23,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 23"
+    "enunciado": "Questão 23"
   }
 },
 {
@@ -960,7 +960,7 @@
   "pk": 24,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÊo 24"
+    "enunciado": "Questão 24"
   }
 },
 {
@@ -968,7 +968,7 @@
   "pk": 1,
   "fields": {
     "pergunta": 1,
-    "conteudo": "am▀vel, gentil",
+    "conteudo": "amável, gentil",
     "perfil": 3
   }
 },
@@ -1004,7 +1004,7 @@
   "pk": 5,
   "fields": {
     "pergunta": 2,
-    "conteudo": "atrativo, simp▀tico, agrad▀vel para os demais",
+    "conteudo": "atrativo, simpático, agradável para os demais",
     "perfil": 2
   }
 },
@@ -1013,7 +1013,7 @@
   "pk": 6,
   "fields": {
     "pergunta": 2,
-    "conteudo": "cooperativo, est▀ de acordo com frequ█ncia",
+    "conteudo": "cooperativo, está de acordo com frequência",
     "perfil": 4
   }
 },
@@ -1040,7 +1040,7 @@
   "pk": 9,
   "fields": {
     "pergunta": 3,
-    "conteudo": "f▀cil de guiar, seguidor",
+    "conteudo": "fácil de guiar, seguidor",
     "perfil": 3
   }
 },
@@ -1094,7 +1094,7 @@
   "pk": 15,
   "fields": {
     "pergunta": 4,
-    "conteudo": "voluntarioso, carÊter forte e decidido",
+    "conteudo": "voluntarioso, caráter forte e decidido",
     "perfil": 1
   }
 },
@@ -1139,7 +1139,7 @@
   "pk": 20,
   "fields": {
     "pergunta": 5,
-    "conteudo": "est▀vel, de temperamento tranquilo, calmo",
+    "conteudo": "estável, de temperamento tranquilo, calmo",
     "perfil": 3
   }
 },
@@ -1184,7 +1184,7 @@
   "pk": 25,
   "fields": {
     "pergunta": 7,
-    "conteudo": "exigente, dif¦cil de satisfazer",
+    "conteudo": "exigente, difícil de satisfazer",
     "perfil": 4
   }
 },
@@ -1193,7 +1193,7 @@
   "pk": 26,
   "fields": {
     "pergunta": 7,
-    "conteudo": "obediente, faz o que lhe pedem que fa■a, comedido",
+    "conteudo": "obediente, faz o que lhe pedem que faça, comedido",
     "perfil": 3
   }
 },
@@ -1211,7 +1211,7 @@
   "pk": 28,
   "fields": {
     "pergunta": 7,
-    "conteudo": "brincalhÊo, divertido",
+    "conteudo": "brincalhão, divertido",
     "perfil": 2
   }
 },
@@ -1220,7 +1220,7 @@
   "pk": 29,
   "fields": {
     "pergunta": 8,
-    "conteudo": "valente, temer▀rio, cheio de coragem",
+    "conteudo": "valente, temerário, cheio de coragem",
     "perfil": 1
   }
 },
@@ -1238,7 +1238,7 @@
   "pk": 31,
   "fields": {
     "pergunta": 8,
-    "conteudo": "obediente, nÊo confronta, cede facilmente",
+    "conteudo": "obediente, não confronta, cede facilmente",
     "perfil": 3
   }
 },
@@ -1247,7 +1247,7 @@
   "pk": 32,
   "fields": {
     "pergunta": 8,
-    "conteudo": "t¦mido, apreensivo, calado",
+    "conteudo": "tímido, apreensivo, calado",
     "perfil": 4
   }
 },
@@ -1256,7 +1256,7 @@
   "pk": 33,
   "fields": {
     "pergunta": 9,
-    "conteudo": "soci▀vel, desfruta da companhia dos outros",
+    "conteudo": "sociável, desfruta da companhia dos outros",
     "perfil": 2
   }
 },
@@ -1265,7 +1265,7 @@
   "pk": 34,
   "fields": {
     "pergunta": 9,
-    "conteudo": "paciente, est▀vel, tolerante",
+    "conteudo": "paciente, estável, tolerante",
     "perfil": 3
   }
 },
@@ -1301,7 +1301,7 @@
   "pk": 38,
   "fields": {
     "pergunta": 10,
-    "conteudo": "receptivo, aberto a sugestºes",
+    "conteudo": "receptivo, aberto a sugestões",
     "perfil": 2
   }
 },
@@ -1310,7 +1310,7 @@
   "pk": 39,
   "fields": {
     "pergunta": 10,
-    "conteudo": "cordial, c▀lido, amistoso",
+    "conteudo": "cordial, cálido, amistoso",
     "perfil": 3
   }
 },
@@ -1346,7 +1346,7 @@
   "pk": 43,
   "fields": {
     "pergunta": 11,
-    "conteudo": "convencional, sistem▀tico, gosta da rotina",
+    "conteudo": "convencional, sistemático, gosta da rotina",
     "perfil": 3
   }
 },
@@ -1355,7 +1355,7 @@
   "pk": 44,
   "fields": {
     "pergunta": 11,
-    "conteudo": "decidido, certo, firme ao tomar decisºes",
+    "conteudo": "decidido, certo, firme ao tomar decisões",
     "perfil": 1
   }
 },
@@ -1382,7 +1382,7 @@
   "pk": 47,
   "fields": {
     "pergunta": 12,
-    "conteudo": "diplom▀tico, tem tato com as pessoas",
+    "conteudo": "diplomático, tem tato com as pessoas",
     "perfil": 3
   }
 },
@@ -1391,7 +1391,7 @@
   "pk": 48,
   "fields": {
     "pergunta": 12,
-    "conteudo": "satisfeito, contente, confort▀vel",
+    "conteudo": "satisfeito, contente, confortável",
     "perfil": 2
   }
 },
@@ -1400,7 +1400,7 @@
   "pk": 49,
   "fields": {
     "pergunta": 13,
-    "conteudo": "agressivo, desafiante, enfocado na a■Êo ou objetivo",
+    "conteudo": "agressivo, desafiante, enfocado na ação ou objetivo",
     "perfil": 1
   }
 },
@@ -1418,7 +1418,7 @@
   "pk": 51,
   "fields": {
     "pergunta": 13,
-    "conteudo": "ing█nuo, ┌ f▀cil que se aproveitem dele",
+    "conteudo": "ingênuo, é fácil que se aproveitem dele",
     "perfil": 3
   }
 },
@@ -1445,7 +1445,7 @@
   "pk": 54,
   "fields": {
     "pergunta": 14,
-    "conteudo": "determinado, decidido, nÊo desiste, se pºe firme",
+    "conteudo": "determinado, decidido, não desiste, se põe firme",
     "perfil": 1
   }
 },
@@ -1454,7 +1454,7 @@
   "pk": 55,
   "fields": {
     "pergunta": 14,
-    "conteudo": "convincente, transmite seguran■a",
+    "conteudo": "convincente, transmite segurança",
     "perfil": 2
   }
 },
@@ -1463,7 +1463,7 @@
   "pk": 56,
   "fields": {
     "pergunta": 14,
-    "conteudo": "de bom car▀ter, cort█s, gosta de satisfazer os demais",
+    "conteudo": "de bom caráter, cortês, gosta de satisfazer os demais",
     "perfil": 3
   }
 },
@@ -1481,7 +1481,7 @@
   "pk": 58,
   "fields": {
     "pergunta": 15,
-    "conteudo": "impaciente, ansioso, desesperado ▀s vezes",
+    "conteudo": "impaciente, ansioso, desesperado às vezes",
     "perfil": 4
   }
 },
@@ -1508,7 +1508,7 @@
   "pk": 61,
   "fields": {
     "pergunta": 16,
-    "conteudo": "tem autoconfian■a, cr█ em si mesmo, seguro",
+    "conteudo": "tem autoconfiança, crê em si mesmo, seguro",
     "perfil": 2
   }
 },
@@ -1571,7 +1571,7 @@
   "pk": 68,
   "fields": {
     "pergunta": 17,
-    "conteudo": "persistente, nÊo volta atr▀s, se nega a perder",
+    "conteudo": "persistente, não volta atrás, se nega a perder",
     "perfil": 1
   }
 },
@@ -1580,7 +1580,7 @@
   "pk": 69,
   "fields": {
     "pergunta": 18,
-    "conteudo": "admir▀vel, digno de reconhecimento",
+    "conteudo": "admirável, digno de reconhecimento",
     "perfil": 4
   }
 },
@@ -1589,7 +1589,7 @@
   "pk": 70,
   "fields": {
     "pergunta": 18,
-    "conteudo": "am▀vel, desejoso de ajudar e de compartilhar",
+    "conteudo": "amável, desejoso de ajudar e de compartilhar",
     "perfil": 2
   }
 },
@@ -1598,7 +1598,7 @@
   "pk": 71,
   "fields": {
     "pergunta": 18,
-    "conteudo": "resignado, desiste, nÊo luta",
+    "conteudo": "resignado, desiste, não luta",
     "perfil": 3
   }
 },
@@ -1607,7 +1607,7 @@
   "pk": 72,
   "fields": {
     "pergunta": 18,
-    "conteudo": "car▀ter forte, poderoso",
+    "conteudo": "caráter forte, poderoso",
     "perfil": 1
   }
 },
@@ -1616,7 +1616,7 @@
   "pk": 73,
   "fields": {
     "pergunta": 19,
-    "conteudo": "respeitoso, trata as pessoas com considera■Êo",
+    "conteudo": "respeitoso, trata as pessoas com consideração",
     "perfil": 4
   }
 },
@@ -1634,7 +1634,7 @@
   "pk": 75,
   "fields": {
     "pergunta": 19,
-    "conteudo": "otimista, v█ o lado positivo de tudo",
+    "conteudo": "otimista, vê o lado positivo de tudo",
     "perfil": 2
   }
 },
@@ -1661,7 +1661,7 @@
   "pk": 78,
   "fields": {
     "pergunta": 20,
-    "conteudo": "adapt▀vel, flex¦vel",
+    "conteudo": "adaptável, flex¦vel",
     "perfil": 4
   }
 },
@@ -1688,7 +1688,7 @@
   "pk": 81,
   "fields": {
     "pergunta": 21,
-    "conteudo": "confia nos demais, tem f┌ nas pessoas",
+    "conteudo": "confia nos demais, tem fé nas pessoas",
     "perfil": 3
   }
 },
@@ -1706,7 +1706,7 @@
   "pk": 83,
   "fields": {
     "pergunta": 21,
-    "conteudo": "positivo, nÊo admite dÀvidas nem temores",
+    "conteudo": "positivo, não admite dÀvidas nem temores",
     "perfil": 1
   }
 },
@@ -1715,7 +1715,7 @@
   "pk": 84,
   "fields": {
     "pergunta": 21,
-    "conteudo": "pac¦fico, tranquilo",
+    "conteudo": "pacífico, tranquilo",
     "perfil": 4
   }
 },
@@ -1724,7 +1724,7 @@
   "pk": 85,
   "fields": {
     "pergunta": 22,
-    "conteudo": "socialmente h▀bil, gosta de estar com os demais",
+    "conteudo": "socialmente hábil, gosta de estar com os demais",
     "perfil": 2
   }
 },
@@ -1742,7 +1742,7 @@
   "pk": 87,
   "fields": {
     "pergunta": 22,
-    "conteudo": "vigoroso, en┌rgico",
+    "conteudo": "vigoroso, enérgico",
     "perfil": 1
   }
 },
@@ -1760,7 +1760,7 @@
   "pk": 89,
   "fields": {
     "pergunta": 23,
-    "conteudo": "agrad▀vel, sua companhia ┌ prazerosa",
+    "conteudo": "agradável, sua companhia é prazerosa",
     "perfil": 2
   }
 },
@@ -1778,7 +1778,7 @@
   "pk": 91,
   "fields": {
     "pergunta": 23,
-    "conteudo": "tem opiniºes claras, fala livre e abertamente",
+    "conteudo": "tem opiniões claras, fala livre e abertamente",
     "perfil": 1
   }
 },
@@ -1796,7 +1796,7 @@
   "pk": 93,
   "fields": {
     "pergunta": 24,
-    "conteudo": "impaciente, nÊo se permite relaxar, nÊo descansa",
+    "conteudo": "impaciente, não se permite relaxar, não descansa",
     "perfil": 1
   }
 },
@@ -1805,7 +1805,7 @@
   "pk": 94,
   "fields": {
     "pergunta": 24,
-    "conteudo": "soci▀vel, am▀vel",
+    "conteudo": "sociável, amável",
     "perfil": 3
   }
 },
