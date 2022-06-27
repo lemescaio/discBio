@@ -54,7 +54,7 @@ def resultados_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename=resultados.csv; enconding=UTF-8;'
 
-    writer = csv.writer(response, dialect='excel', delimiter=',')
+    writer = csv.writer(response, dialect='excel', delimiter=';')
     writer.writerow(headers)
     for d in data:
         writer.writerow(d)
@@ -100,6 +100,7 @@ def teste(request, id):
     elif request.method == "POST":
 
         ra = request.POST["ra"]
+        cpf = request.POST["cpf"]
         email = request.POST["email"]
         nome = request.POST["nome"]
         aluno_empregado = False
@@ -108,7 +109,7 @@ def teste(request, id):
 
         listaPerguntasResp = []
         for chave, conteudo in request.POST.items():
-            if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome','aluno_empregado']:
+            if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome','aluno_empregado', "cpf"]:
                 listaPerguntasResp.append(chave)
         l = [x.split('__')[0] for x in listaPerguntasResp]
 
@@ -127,7 +128,7 @@ def teste(request, id):
 
                 for chave, conteudo in request.POST.items():
 
-                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
+                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado', "cpf"]:
                         respostas_dict[conteudo[0]] += 1
                         totalRespostas += 1
 
@@ -140,6 +141,7 @@ def teste(request, id):
                     aluno = Aluno()
                     aluno.ra = ra
                     aluno.nome = nome
+                    aluno.cpf = cpf
                     aluno.email = email
                 aluno.aluno_empregado = aluno_empregado
                 aluno.save()
@@ -158,6 +160,7 @@ def teste(request, id):
             aluno.ra = ra
             aluno.nome = nome
             aluno.email = email
+            aluno.cpf = cpf
             aluno.aluno_empregado = aluno_empregado
 
             respostasChave = []
@@ -165,7 +168,7 @@ def teste(request, id):
                 perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
 
             for chave, conteudo in request.POST.items():
-                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
+                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado',"cpf"]:
                     respostasChave.append(chave)
             respostas = [int(x.split('__')[1]) for x in respostasChave]
 
@@ -178,6 +181,8 @@ def teste(request, id):
                 retorno = "Campo email não informado."
 
             if nome == "":
+                retorno = "Campo nome não informado."
+            if cpf == "":
                 retorno = "Campo nome não informado."
 
             return render(request, "disc_website/teste.html",
