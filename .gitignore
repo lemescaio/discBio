@@ -2,3 +2,4 @@ db.sqlite3
 __pycache__
 disc_website/migrations/*
 */migrations/*g
+.venv/*
