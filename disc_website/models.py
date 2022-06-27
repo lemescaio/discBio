@@ -19,7 +19,7 @@ class Aluno(models.Model):
   #turma = models.ManyToManyField(Turma)
 
   def save(self, *args, **kwargs):
-        self.cpf = hashlib.md5(self.cpf)
+        self.cpf = hashlib.md5(self.cpf.encode(encoding = 'UTF-8'))
         super(Aluno, self).save(*args, **kwargs)
 
   def __str__(self):
