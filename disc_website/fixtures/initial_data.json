@@ -1,5 +1,639 @@
 [
 {
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add aluno",
+    "content_type": 7,
+    "codename": "add_aluno"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change aluno",
+    "content_type": 7,
+    "codename": "change_aluno"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete aluno",
+    "content_type": 7,
+    "codename": "delete_aluno"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view aluno",
+    "content_type": 7,
+    "codename": "view_aluno"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add teste",
+    "content_type": 8,
+    "codename": "add_teste"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change teste",
+    "content_type": 8,
+    "codename": "change_teste"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete teste",
+    "content_type": 8,
+    "codename": "delete_teste"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view teste",
+    "content_type": 8,
+    "codename": "view_teste"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add turma",
+    "content_type": 9,
+    "codename": "add_turma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change turma",
+    "content_type": 9,
+    "codename": "change_turma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete turma",
+    "content_type": 9,
+    "codename": "delete_turma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view turma",
+    "content_type": 9,
+    "codename": "view_turma"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add universidade",
+    "content_type": 10,
+    "codename": "add_universidade"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change universidade",
+    "content_type": 10,
+    "codename": "change_universidade"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete universidade",
+    "content_type": 10,
+    "codename": "delete_universidade"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view universidade",
+    "content_type": 10,
+    "codename": "view_universidade"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add resultado",
+    "content_type": 11,
+    "codename": "add_resultado"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change resultado",
+    "content_type": 11,
+    "codename": "change_resultado"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete resultado",
+    "content_type": 11,
+    "codename": "delete_resultado"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view resultado",
+    "content_type": 11,
+    "codename": "view_resultado"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add pergunta",
+    "content_type": 12,
+    "codename": "add_pergunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change pergunta",
+    "content_type": 12,
+    "codename": "change_pergunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete pergunta",
+    "content_type": 12,
+    "codename": "delete_pergunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view pergunta",
+    "content_type": 12,
+    "codename": "view_pergunta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add link",
+    "content_type": 13,
+    "codename": "add_link"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change link",
+    "content_type": 13,
+    "codename": "change_link"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete link",
+    "content_type": 13,
+    "codename": "delete_link"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view link",
+    "content_type": 13,
+    "codename": "view_link"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add alternativa",
+    "content_type": 14,
+    "codename": "add_alternativa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change alternativa",
+    "content_type": 14,
+    "codename": "change_alternativa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete alternativa",
+    "content_type": 14,
+    "codename": "delete_alternativa"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view alternativa",
+    "content_type": 14,
+    "codename": "view_alternativa"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$3kAN6mVpP8cx3RmVnp8A37$4RiAa1ryuIFLZfLLnLJVE9JQMnby0Wg3VCs7KHpLLyI=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "ads_disc",
+    "first_name": "",
+    "last_name": "",
+    "email": "ads_disc@admin.com.br",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-06-28T01:45:49.960Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "aluno"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "teste"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "turma"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "universidade"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "resultado"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "pergunta"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "link"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "disc_website",
+    "model": "alternativa"
+  }
+},
+{
   "model": "disc_website.aluno",
   "pk": 1,
   "fields": {
@@ -70,7 +704,7 @@
     "dominancia": 0.0,
     "cautela": 0.5,
     "estabilidade": 0.5,
-    "resultado_final": "Cauteloso Estßvel"
+    "resultado_final": "Cauteloso Est▀vel"
   }
 },
 {
@@ -98,7 +732,7 @@
     "dominancia": 0.25,
     "cautela": 0.25,
     "estabilidade": 0.25,
-    "resultado_final": "Dominante Cauteloso Influente Estßvel"
+    "resultado_final": "Dominante Cauteloso Influente Est▀vel"
   }
 },
 {
@@ -133,7 +767,7 @@
   "model": "disc_website.teste",
   "pk": 1,
   "fields": {
-    "nome": "Anßlise de Perfil (DISC)",
+    "nome": "An▀lise de Perfil (DISC)",
     "tipo": 1
   }
 },
@@ -142,7 +776,7 @@
   "pk": 1,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 1"
+    "enunciado": "QuestÊo 1"
   }
 },
 {
@@ -150,7 +784,7 @@
   "pk": 2,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 2"
+    "enunciado": "QuestÊo 2"
   }
 },
 {
@@ -158,7 +792,7 @@
   "pk": 3,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 3"
+    "enunciado": "QuestÊo 3"
   }
 },
 {
@@ -166,7 +800,7 @@
   "pk": 4,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 4"
+    "enunciado": "QuestÊo 4"
   }
 },
 {
@@ -174,7 +808,7 @@
   "pk": 5,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 5"
+    "enunciado": "QuestÊo 5"
   }
 },
 {
@@ -182,7 +816,7 @@
   "pk": 6,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 6"
+    "enunciado": "QuestÊo 6"
   }
 },
 {
@@ -190,7 +824,7 @@
   "pk": 7,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 7"
+    "enunciado": "QuestÊo 7"
   }
 },
 {
@@ -198,7 +832,7 @@
   "pk": 8,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 8"
+    "enunciado": "QuestÊo 8"
   }
 },
 {
@@ -206,7 +840,7 @@
   "pk": 9,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 9"
+    "enunciado": "QuestÊo 9"
   }
 },
 {
@@ -214,7 +848,7 @@
   "pk": 10,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 10"
+    "enunciado": "QuestÊo 10"
   }
 },
 {
@@ -222,7 +856,7 @@
   "pk": 11,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 11"
+    "enunciado": "QuestÊo 11"
   }
 },
 {
@@ -230,7 +864,7 @@
   "pk": 12,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 12"
+    "enunciado": "QuestÊo 12"
   }
 },
 {
@@ -238,7 +872,7 @@
   "pk": 13,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 13"
+    "enunciado": "QuestÊo 13"
   }
 },
 {
@@ -246,7 +880,7 @@
   "pk": 14,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 14"
+    "enunciado": "QuestÊo 14"
   }
 },
 {
@@ -254,7 +888,7 @@
   "pk": 15,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 15"
+    "enunciado": "QuestÊo 15"
   }
 },
 {
@@ -262,7 +896,7 @@
   "pk": 16,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 16"
+    "enunciado": "QuestÊo 16"
   }
 },
 {
@@ -270,7 +904,7 @@
   "pk": 17,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 17"
+    "enunciado": "QuestÊo 17"
   }
 },
 {
@@ -278,7 +912,7 @@
   "pk": 18,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 18"
+    "enunciado": "QuestÊo 18"
   }
 },
 {
@@ -286,7 +920,7 @@
   "pk": 19,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 19"
+    "enunciado": "QuestÊo 19"
   }
 },
 {
@@ -294,7 +928,7 @@
   "pk": 20,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 20"
+    "enunciado": "QuestÊo 20"
   }
 },
 {
@@ -302,7 +936,7 @@
   "pk": 21,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 21"
+    "enunciado": "QuestÊo 21"
   }
 },
 {
@@ -310,7 +944,7 @@
   "pk": 22,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 22"
+    "enunciado": "QuestÊo 22"
   }
 },
 {
@@ -318,7 +952,7 @@
   "pk": 23,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 23"
+    "enunciado": "QuestÊo 23"
   }
 },
 {
@@ -326,7 +960,7 @@
   "pk": 24,
   "fields": {
     "teste": 1,
-    "enunciado": "QuestÒo 24"
+    "enunciado": "QuestÊo 24"
   }
 },
 {
@@ -334,7 +968,7 @@
   "pk": 1,
   "fields": {
     "pergunta": 1,
-    "conteudo": "amßvel, gentil",
+    "conteudo": "am▀vel, gentil",
     "perfil": 3
   }
 },
@@ -370,7 +1004,7 @@
   "pk": 5,
   "fields": {
     "pergunta": 2,
-    "conteudo": "atrativo, simpßtico, agradßvel para os demais",
+    "conteudo": "atrativo, simp▀tico, agrad▀vel para os demais",
     "perfil": 2
   }
 },
@@ -379,7 +1013,7 @@
   "pk": 6,
   "fields": {
     "pergunta": 2,
-    "conteudo": "cooperativo, estß de acordo com frequÛncia",
+    "conteudo": "cooperativo, est▀ de acordo com frequ█ncia",
     "perfil": 4
   }
 },
@@ -406,7 +1040,7 @@
   "pk": 9,
   "fields": {
     "pergunta": 3,
-    "conteudo": "fßcil de guiar, seguidor",
+    "conteudo": "f▀cil de guiar, seguidor",
     "perfil": 3
   }
 },
@@ -460,7 +1094,7 @@
   "pk": 15,
   "fields": {
     "pergunta": 4,
-    "conteudo": "voluntarioso, carÒter forte e decidido",
+    "conteudo": "voluntarioso, carÊter forte e decidido",
     "perfil": 1
   }
 },
@@ -505,7 +1139,7 @@
   "pk": 20,
   "fields": {
     "pergunta": 5,
-    "conteudo": "estßvel, de temperamento tranquilo, calmo",
+    "conteudo": "est▀vel, de temperamento tranquilo, calmo",
     "perfil": 3
   }
 },
@@ -550,7 +1184,7 @@
   "pk": 25,
   "fields": {
     "pergunta": 7,
-    "conteudo": "exigente, difÝcil de satisfazer",
+    "conteudo": "exigente, dif¦cil de satisfazer",
     "perfil": 4
   }
 },
@@ -559,7 +1193,7 @@
   "pk": 26,
   "fields": {
     "pergunta": 7,
-    "conteudo": "obediente, faz o que lhe pedem que faþa, comedido",
+    "conteudo": "obediente, faz o que lhe pedem que fa■a, comedido",
     "perfil": 3
   }
 },
@@ -577,7 +1211,7 @@
   "pk": 28,
   "fields": {
     "pergunta": 7,
-    "conteudo": "brincalhÒo, divertido",
+    "conteudo": "brincalhÊo, divertido",
     "perfil": 2
   }
 },
@@ -586,7 +1220,7 @@
   "pk": 29,
   "fields": {
     "pergunta": 8,
-    "conteudo": "valente, temerßrio, cheio de coragem",
+    "conteudo": "valente, temer▀rio, cheio de coragem",
     "perfil": 1
   }
 },
@@ -604,7 +1238,7 @@
   "pk": 31,
   "fields": {
     "pergunta": 8,
-    "conteudo": "obediente, nÒo confronta, cede facilmente",
+    "conteudo": "obediente, nÊo confronta, cede facilmente",
     "perfil": 3
   }
 },
@@ -613,7 +1247,7 @@
   "pk": 32,
   "fields": {
     "pergunta": 8,
-    "conteudo": "tÝmido, apreensivo, calado",
+    "conteudo": "t¦mido, apreensivo, calado",
     "perfil": 4
   }
 },
@@ -622,7 +1256,7 @@
   "pk": 33,
   "fields": {
     "pergunta": 9,
-    "conteudo": "socißvel, desfruta da companhia dos outros",
+    "conteudo": "soci▀vel, desfruta da companhia dos outros",
     "perfil": 2
   }
 },
@@ -631,7 +1265,7 @@
   "pk": 34,
   "fields": {
     "pergunta": 9,
-    "conteudo": "paciente, estßvel, tolerante",
+    "conteudo": "paciente, est▀vel, tolerante",
     "perfil": 3
   }
 },
@@ -667,7 +1301,7 @@
   "pk": 38,
   "fields": {
     "pergunta": 10,
-    "conteudo": "receptivo, aberto a sugest§es",
+    "conteudo": "receptivo, aberto a sugestºes",
     "perfil": 2
   }
 },
@@ -676,7 +1310,7 @@
   "pk": 39,
   "fields": {
     "pergunta": 10,
-    "conteudo": "cordial, cßlido, amistoso",
+    "conteudo": "cordial, c▀lido, amistoso",
     "perfil": 3
   }
 },
@@ -712,7 +1346,7 @@
   "pk": 43,
   "fields": {
     "pergunta": 11,
-    "conteudo": "convencional, sistemßtico, gosta da rotina",
+    "conteudo": "convencional, sistem▀tico, gosta da rotina",
     "perfil": 3
   }
 },
@@ -721,7 +1355,7 @@
   "pk": 44,
   "fields": {
     "pergunta": 11,
-    "conteudo": "decidido, certo, firme ao tomar decis§es",
+    "conteudo": "decidido, certo, firme ao tomar decisºes",
     "perfil": 1
   }
 },
@@ -748,7 +1382,7 @@
   "pk": 47,
   "fields": {
     "pergunta": 12,
-    "conteudo": "diplomßtico, tem tato com as pessoas",
+    "conteudo": "diplom▀tico, tem tato com as pessoas",
     "perfil": 3
   }
 },
@@ -757,7 +1391,7 @@
   "pk": 48,
   "fields": {
     "pergunta": 12,
-    "conteudo": "satisfeito, contente, confortßvel",
+    "conteudo": "satisfeito, contente, confort▀vel",
     "perfil": 2
   }
 },
@@ -766,7 +1400,7 @@
   "pk": 49,
   "fields": {
     "pergunta": 13,
-    "conteudo": "agressivo, desafiante, enfocado na aþÒo ou objetivo",
+    "conteudo": "agressivo, desafiante, enfocado na a■Êo ou objetivo",
     "perfil": 1
   }
 },
@@ -784,7 +1418,7 @@
   "pk": 51,
   "fields": {
     "pergunta": 13,
-    "conteudo": "ingÛnuo, Ú fßcil que se aproveitem dele",
+    "conteudo": "ing█nuo, ┌ f▀cil que se aproveitem dele",
     "perfil": 3
   }
 },
@@ -811,7 +1445,7 @@
   "pk": 54,
   "fields": {
     "pergunta": 14,
-    "conteudo": "determinado, decidido, nÒo desiste, se p§e firme",
+    "conteudo": "determinado, decidido, nÊo desiste, se pºe firme",
     "perfil": 1
   }
 },
@@ -820,7 +1454,7 @@
   "pk": 55,
   "fields": {
     "pergunta": 14,
-    "conteudo": "convincente, transmite seguranþa",
+    "conteudo": "convincente, transmite seguran■a",
     "perfil": 2
   }
 },
@@ -829,7 +1463,7 @@
   "pk": 56,
   "fields": {
     "pergunta": 14,
-    "conteudo": "de bom carßter, cortÛs, gosta de satisfazer os demais",
+    "conteudo": "de bom car▀ter, cort█s, gosta de satisfazer os demais",
     "perfil": 3
   }
 },
@@ -847,7 +1481,7 @@
   "pk": 58,
   "fields": {
     "pergunta": 15,
-    "conteudo": "impaciente, ansioso, desesperado ßs vezes",
+    "conteudo": "impaciente, ansioso, desesperado ▀s vezes",
     "perfil": 4
   }
 },
@@ -874,7 +1508,7 @@
   "pk": 61,
   "fields": {
     "pergunta": 16,
-    "conteudo": "tem autoconfianþa, crÛ em si mesmo, seguro",
+    "conteudo": "tem autoconfian■a, cr█ em si mesmo, seguro",
     "perfil": 2
   }
 },
@@ -937,7 +1571,7 @@
   "pk": 68,
   "fields": {
     "pergunta": 17,
-    "conteudo": "persistente, nÒo volta atrßs, se nega a perder",
+    "conteudo": "persistente, nÊo volta atr▀s, se nega a perder",
     "perfil": 1
   }
 },
@@ -946,7 +1580,7 @@
   "pk": 69,
   "fields": {
     "pergunta": 18,
-    "conteudo": "admirßvel, digno de reconhecimento",
+    "conteudo": "admir▀vel, digno de reconhecimento",
     "perfil": 4
   }
 },
@@ -955,7 +1589,7 @@
   "pk": 70,
   "fields": {
     "pergunta": 18,
-    "conteudo": "amßvel, desejoso de ajudar e de compartilhar",
+    "conteudo": "am▀vel, desejoso de ajudar e de compartilhar",
     "perfil": 2
   }
 },
@@ -964,7 +1598,7 @@
   "pk": 71,
   "fields": {
     "pergunta": 18,
-    "conteudo": "resignado, desiste, nÒo luta",
+    "conteudo": "resignado, desiste, nÊo luta",
     "perfil": 3
   }
 },
@@ -973,7 +1607,7 @@
   "pk": 72,
   "fields": {
     "pergunta": 18,
-    "conteudo": "carßter forte, poderoso",
+    "conteudo": "car▀ter forte, poderoso",
     "perfil": 1
   }
 },
@@ -982,7 +1616,7 @@
   "pk": 73,
   "fields": {
     "pergunta": 19,
-    "conteudo": "respeitoso, trata as pessoas com consideraþÒo",
+    "conteudo": "respeitoso, trata as pessoas com considera■Êo",
     "perfil": 4
   }
 },
@@ -1000,7 +1634,7 @@
   "pk": 75,
   "fields": {
     "pergunta": 19,
-    "conteudo": "otimista, vÛ o lado positivo de tudo",
+    "conteudo": "otimista, v█ o lado positivo de tudo",
     "perfil": 2
   }
 },
@@ -1027,7 +1661,7 @@
   "pk": 78,
   "fields": {
     "pergunta": 20,
-    "conteudo": "adaptßvel, flexÝvel",
+    "conteudo": "adapt▀vel, flex¦vel",
     "perfil": 4
   }
 },
@@ -1054,7 +1688,7 @@
   "pk": 81,
   "fields": {
     "pergunta": 21,
-    "conteudo": "confia nos demais, tem fÚ nas pessoas",
+    "conteudo": "confia nos demais, tem f┌ nas pessoas",
     "perfil": 3
   }
 },
@@ -1072,7 +1706,7 @@
   "pk": 83,
   "fields": {
     "pergunta": 21,
-    "conteudo": "positivo, nÒo admite d·vidas nem temores",
+    "conteudo": "positivo, nÊo admite dÀvidas nem temores",
     "perfil": 1
   }
 },
@@ -1081,7 +1715,7 @@
   "pk": 84,
   "fields": {
     "pergunta": 21,
-    "conteudo": "pacÝfico, tranquilo",
+    "conteudo": "pac¦fico, tranquilo",
     "perfil": 4
   }
 },
@@ -1090,7 +1724,7 @@
   "pk": 85,
   "fields": {
     "pergunta": 22,
-    "conteudo": "socialmente hßbil, gosta de estar com os demais",
+    "conteudo": "socialmente h▀bil, gosta de estar com os demais",
     "perfil": 2
   }
 },
@@ -1108,7 +1742,7 @@
   "pk": 87,
   "fields": {
     "pergunta": 22,
-    "conteudo": "vigoroso, enÚrgico",
+    "conteudo": "vigoroso, en┌rgico",
     "perfil": 1
   }
 },
@@ -1126,7 +1760,7 @@
   "pk": 89,
   "fields": {
     "pergunta": 23,
-    "conteudo": "agradßvel, sua companhia Ú prazerosa",
+    "conteudo": "agrad▀vel, sua companhia ┌ prazerosa",
     "perfil": 2
   }
 },
@@ -1144,7 +1778,7 @@
   "pk": 91,
   "fields": {
     "pergunta": 23,
-    "conteudo": "tem opini§es claras, fala livre e abertamente",
+    "conteudo": "tem opiniºes claras, fala livre e abertamente",
     "perfil": 1
   }
 },
@@ -1162,7 +1796,7 @@
   "pk": 93,
   "fields": {
     "pergunta": 24,
-    "conteudo": "impaciente, nÒo se permite relaxar, nÒo descansa",
+    "conteudo": "impaciente, nÊo se permite relaxar, nÊo descansa",
     "perfil": 1
   }
 },
@@ -1171,7 +1805,7 @@
   "pk": 94,
   "fields": {
     "pergunta": 24,
-    "conteudo": "socißvel, amßvel",
+    "conteudo": "soci▀vel, am▀vel",
     "perfil": 3
   }
 },
