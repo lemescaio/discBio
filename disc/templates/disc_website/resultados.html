@@ -29,17 +29,21 @@
             <div class="filters-container">
               <h5>Situação:</h5>
               <div class="form-check">
-                <input class="form-check-input" type="hidden" id="empregado" name="empregado" checked="empregado">
-                <input class="form-check-input" type="checkbox" id="empregado" name="empregado" checked="empregado">
-                
+                <input class="form-check-input" type="hidden" id="empregado" name="empregado">
+                <input class="form-check-input" type="checkbox" id="empregado" name="empregado"
+                  {% if "empregado" in listEmprego %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="empregado">
                   Empregado
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="desempregado" name="desempregado" type="hidden" checked="desempregado">
-                <input class="form-check-input" id="desempregado" name="desempregado" type="checkbox" checked="desempregado">
-
+                <input class="form-check-input" id="desempregado" name="desempregado" type="hidden">
+                <input class="form-check-input" id="desempregado" name="desempregado" type="checkbox" 
+                  {% if "desempregado" in listEmprego %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="desempregado">
                   Desempregado
                 </label>
@@ -48,29 +52,41 @@
             <div class="filters-container">
               <h5>Perfil:</h5>
               <div class="form-check">
-                <input class="form-check-input" type="hidden" id="dominante" name="dominante" checked="dominante">
-                <input class="form-check-input" type="checkbox" id="dominante" name="dominante" checked="dominante">
+                <input class="form-check-input" type="hidden" id="dominante" name="dominante">
+                <input class="form-check-input" type="checkbox" id="dominante" name="dominante" 
+                  {% if "Dominante" in listPerfilSelec %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="dominante">
                   Dominante
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="cauteloso" name="cauteloso" type="hidden" checked="cauteloso">
-                <input class="form-check-input" id="cauteloso" name="cauteloso" type="checkbox" checked="cauteloso">
+                <input class="form-check-input" id="cauteloso" name="cauteloso" type="hidden">
+                <input class="form-check-input" id="cauteloso" name="cauteloso" type="checkbox" 
+                  {% if "Cauteloso" in listPerfilSelec %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="cauteloso">
                   Cauteloso
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="influente" name="influente" type="hidden" checked="influente">
-                <input class="form-check-input" id="influente" name="influente" type="checkbox" checked="influente">
+                <input class="form-check-input" id="influente" name="influente" type="hidden">
+                <input class="form-check-input" id="influente" name="influente" type="checkbox" 
+                  {% if "Influente" in listPerfilSelec %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="influente">
                   Influente
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" id="estavel" name="estavel" type="hidden" checked="estavel">
-                <input class="form-check-input" id="estavel" name="estavel" type="checkbox" checked="estavel">
+                <input class="form-check-input" id="estavel" name="estavel" type="hidden">
+                <input class="form-check-input" id="estavel" name="estavel" type="checkbox" 
+                  {% if "Estável" in listPerfilSelec %}
+                    checked = true
+                  {% endif %}>
                 <label class="form-check-label" for="estavel">
                   Estável
                 </label>

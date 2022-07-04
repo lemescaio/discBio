@@ -74,6 +74,12 @@ def resultados(request):
         influ = request.POST['influente']
         estav = request.POST['estavel']
         
+        listEmprego = []
+        if empregado == 'on':
+            listEmprego.append('empregado')
+        if desempregado == 'on':
+            listEmprego.append('desempregado')
+
         listaPerfis = []
         if domin == 'on':
             listaPerfis.append("Dominante")
@@ -83,6 +89,8 @@ def resultados(request):
             listaPerfis.append("Influente")
         if estav == 'on':
             listaPerfis.append("Estável")
+        if listaPerfis == []:
+            listaPerfis = ["Dominante", "Cauteloso", "Influente", "Estável"]
          
         if not busca:
             if empregado == 'on' and desempregado == '':
@@ -103,10 +111,11 @@ def resultados(request):
     else:
         alunos = Aluno.objects.all()
         listaPerfis = ["Dominante", "Cauteloso", "Influente", "Estável"]
+        listEmprego = ['empregado', 'desempregado']
 
     return render(request, "disc_website/resultados.html",
                   {"resultados": Resultado.objects.filter(reduce(operator.or_, (Q(aluno__in=alunos, resultado_final__contains=x) for x in listaPerfis))),
-                   "navbar_resultados" : "active"})
+                   "listPerfilSelec": listaPerfis, "listEmprego": listEmprego, "navbar_resultados" : "active"})
 
 
 def teste(request, id):
