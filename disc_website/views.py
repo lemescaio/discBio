@@ -11,7 +11,9 @@ import pytz
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
-
+from functools import reduce
+from django.db.models import Q
+import operator
 import csv
 
 utc=pytz.UTC
@@ -54,7 +56,7 @@ def resultados_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename=resultados.csv; enconding=UTF-8;'
 
-    writer = csv.writer(response, dialect='excel', delimiter=',')
+    writer = csv.writer(response, dialect='excel', delimiter=';')
     writer.writerow(headers)
     for d in data:
         writer.writerow(d)
@@ -65,21 +67,44 @@ def resultados_csv(request):
 def resultados(request):
     if request.method == 'POST':
         busca = request.POST['buscaAluno']
+        empregado = request.POST['empregado']
+        desempregado = request.POST['desempregado']
+        domin = request.POST['dominante']
+        caute = request.POST['cauteloso']
+        influ = request.POST['influente']
+        estav = request.POST['estavel']
+        
+        listaPerfis = []
+        if domin == 'on':
+            listaPerfis.append("Dominante")
+        if caute == 'on':
+            listaPerfis.append("Cauteloso")
+        if influ == 'on':
+            listaPerfis.append("Influente")
+        if estav == 'on':
+            listaPerfis.append("Estável")
+         
         if not busca:
-            alunos = Aluno.objects.all()
-            return render(request, "disc_website/resultados.html",
-                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
-                           "navbar_resultados": "active"})
+            if empregado == 'on' and desempregado == '':
+                alunos = Aluno.objects.filter(aluno_empregado='True')
+            elif empregado == '' and desempregado == 'on':
+                alunos = Aluno.objects.filter(aluno_empregado='False')
+            elif empregado == 'on' and desempregado == 'on' or empregado == '' and desempregado == '':
+                alunos = Aluno.objects.all()
+
         else:
-            alunos = Aluno.objects.filter(nome__icontains=busca)
-            return render(request, "disc_website/resultados.html",
-                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
-                           "navbar_resultados": "active"})
+            if empregado == 'on' and desempregado == '':
+                alunos = Aluno.objects.filter(nome__icontains=busca, aluno_empregado='True')
+            elif empregado == '' and desempregado == 'on':
+                alunos = Aluno.objects.filter(nome__icontains=busca, aluno_empregado='False')
+            elif empregado == 'on' and desempregado == 'on' or empregado == '' and desempregado == '':
+                alunos = Aluno.objects.filter(nome__icontains=busca)
+
     else:
         alunos = Aluno.objects.all()
 
     return render(request, "disc_website/resultados.html",
-                  {"resultados": Resultado.objects.filter(aluno__in=alunos),
+                  {"resultados": Resultado.objects.filter(reduce(operator.or_, (Q(aluno__in=alunos, resultado_final__contains=x) for x in listaPerfis))),
                    "navbar_resultados" : "active"})
 
 
@@ -100,6 +125,7 @@ def teste(request, id):
     elif request.method == "POST":
 
         ra = request.POST["ra"]
+        cpf = request.POST["cpf"]
         email = request.POST["email"]
         nome = request.POST["nome"]
         aluno_empregado = False
@@ -108,7 +134,7 @@ def teste(request, id):
 
         listaPerguntasResp = []
         for chave, conteudo in request.POST.items():
-            if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome','aluno_empregado']:
+            if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome','aluno_empregado', "cpf"]:
                 listaPerguntasResp.append(chave)
         l = [x.split('__')[0] for x in listaPerguntasResp]
 
@@ -127,7 +153,7 @@ def teste(request, id):
 
                 for chave, conteudo in request.POST.items():
 
-                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
+                    if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado', "cpf"]:
                         respostas_dict[conteudo[0]] += 1
                         totalRespostas += 1
 
@@ -140,6 +166,7 @@ def teste(request, id):
                     aluno = Aluno()
                     aluno.ra = ra
                     aluno.nome = nome
+                    aluno.cpf = cpf
                     aluno.email = email
                 aluno.aluno_empregado = aluno_empregado
                 aluno.save()
@@ -158,6 +185,7 @@ def teste(request, id):
             aluno.ra = ra
             aluno.nome = nome
             aluno.email = email
+            aluno.cpf = cpf
             aluno.aluno_empregado = aluno_empregado
 
             respostasChave = []
@@ -165,7 +193,7 @@ def teste(request, id):
                 perguntas_dict[pergunta.enunciado] = Alternativa.objects.filter(pergunta=pergunta)
 
             for chave, conteudo in request.POST.items():
-                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado']:
+                if chave not in ["csrfmiddlewaretoken", 'ra', 'email', 'nome', 'aluno_empregado',"cpf"]:
                     respostasChave.append(chave)
             respostas = [int(x.split('__')[1]) for x in respostasChave]
 
@@ -178,6 +206,8 @@ def teste(request, id):
                 retorno = "Campo email não informado."
 
             if nome == "":
+                retorno = "Campo nome não informado."
+            if cpf == "":
                 retorno = "Campo nome não informado."
 
             return render(request, "disc_website/teste.html",
