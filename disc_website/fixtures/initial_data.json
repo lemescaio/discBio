@@ -1826,5 +1826,121 @@
     "conteudo": "ordenado, organizado, claro",
     "perfil": 4
   }
+},{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-06-28T01:01:01.653Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "97",
+    "object_repr": "dominancia - Test 1... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-06-28T01:01:20.723Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "98",
+    "object_repr": "influencia - Test 1... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-06-28T01:01:34.180Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "99",
+    "object_repr": "cautela - Test 1... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-06-28T01:01:45.909Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "100",
+    "object_repr": "estabilidade - Test 1... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-06-28T01:02:00.748Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "101",
+    "object_repr": "dominancia - Test 2... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-06-28T01:02:13.587Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "102",
+    "object_repr": "influencia - Test 2... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-06-28T01:02:26.636Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "103",
+    "object_repr": "cautela - Test 2... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-06-28T01:02:39.833Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "104",
+    "object_repr": "estabilidade - Test 2... - Teste Check-box",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-06-28T01:04:32.760Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Biopark",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 }
 ]
