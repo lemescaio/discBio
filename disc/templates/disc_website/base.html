@@ -4,15 +4,44 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap-icons/font/bootstrap-icons.css' %}">
-        <script src="stylesheet" href="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="stylesheet" href="{% static 'js/bootstrap.bundle.min.js' %}"></script>
         <title>
-            project - the best app
+            Sistema de análise de personalidade | SAP | Biopark
         </title>
     </head>
     <body>
         {% block navbar %}
             {% if user.is_authenticated %}
-            <div class="container-fluid margin-cabecalho">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/static/images/biopark.png" alt="Biopark" height="50" class="d-inline-block align-text-top">
+                        
+                    </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link {{navbar_resultados}}" href="/resultados">Resultados</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/admin/">Admin</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/logout/">Sair</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+
+            <!-- <div class="container-fluid margin-cabecalho">
                 <div class="row">
                     <div class="col-md-12">
                         <ul class="nav nav-pills">
@@ -29,7 +58,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             {% endif %}
         {% endblock %}

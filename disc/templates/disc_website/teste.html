@@ -1,48 +1,81 @@
 {% extends "disc_website/base.html" %}
 {% block content %}
-<div class="col-md-12 ">
-  <form method="post">
-    {% csrf_token %}
-    <div>
-      <h1 class="text-center titulo-disc-teste">Formulário Teste DISC</h1>
-      <div class="container-fluid margin-cabecalho">
-        <div class="row">
-          <div class="input-group col-md-4 margin-cabecalho">
-            <span class="input-group-text">Nome:</span>
-            <input type="text" aria-label="First name" class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome">
-          </div>
-          <div class="input-group col-md-4 margin-cabecalho">
-            <span class="input-group-text">E-mail:</span>
-            <input id="email" type="text" placeholder="Digite seu E-mail" name="email" aria-label="First name" class="form-control">
-          </div>
-          <div class="input-group col-md-4 margin-cabecalho">
-            <span class="input-group-text">RA:</span>
-            <input id="ra" type="text" placeholder="Digite seu RA" name="ra" aria-label="First name" class="form-control">
-          </div>
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <h1 class="text-center titulo-disc-teste">Formulário Teste DISC</h1>
+    <div class="container-fluid margin-cabecalho">
+      <div class="row">
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">Nome:</span>
+          <input type="text"class="form-control" id="nome" placeholder="Digite seu Nome Completo" name="nome" value="{{aluno.nome}}">
+        </div>
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">E-mail:</span>
+          <input id="email" type="text" placeholder="Digite seu E-mail" name="email" class="form-control" value="{{aluno.email}}">
+        </div>
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">RA:</span>
+          <input id="ra" type="text" placeholder="Digite seu RA" name="ra" class="form-control" value="{{aluno.ra}}">
+        </div>
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">CPF:</span>
+          <input id="cpf" type="text" placeholder="Digite seu CPF" name="cpf" class="form-control" value="{{aluno.cpf}}">
+        </div>
+        <div class="input-group col-md-3 margin-cabecalho">
+          <span class="input-group-text">Situação:</span>
+          <select  class="form-control" id="aluno_empregado" name="aluno_empregado">
+            <option hidden value='0'>Informe sua situação atual</option>
+            <option value='1'
+                    {%if aluno.aluno_empregado %}
+                      selected
+                    {% endif %}>Empregado
+            </option>
+            <option value='2'
+                    {%if aluno.aluno_empregado == False %}
+                      selected
+                    {% endif %}>Disponível
+            </option>
+          </select>
         </div>
       </div>
     </div>
-    <div>
-      {% for pergunta,alternativas in perguntas.items %}
-      <div class="col-md-5 margin-cabecalho">
-        <h3>{{pergunta}}</h3>
-      </div>
-        <filedset>
-          {% for alternativa in alternativas %}
-          <div class="col-md-5">
-            <input type="radio" name="{{pergunta}}" id="{{alternativa}}" value="{{alternativa.perfil}}" onclick="Check(this)" required>
-            <label for="{{alternativa}}"> {{alternativa.conteudo}}</label>
-            <br>
-          </div>
-          {% endfor %}
-        </filedset>
-      {% endfor %}
-      <div class="col-md-4 offset-md-4 margin-cabecalho">
-        <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar</button>
-      </div>
-      </div> 
+  </div>
+  <div>
+    {% for pergunta,alternativas in perguntas.items %}
+    <div class="col-md-5 margin-cabecalho">
+      <h3>{{pergunta}}</h3>
     </div>
-  </form>
+    <filedset>
+      {% for alternativa in alternativas %}
+      <div class="col-md-5">
+        {% if alternativa.pergunta.teste.tipo == 1 %}
+        <input type="checkbox" name="{{alternativa.pergunta.id}}__{{alternativa.id}}__{{alternativa.perfil}}" id="{{alternativa.id}}__{{alternativa.perfil}}" value="{{alternativa.perfil}}" onclick="Check(this)"
+               {% if alternativa.id in respostas %}
+                  checked = true
+               {% endif %}>
+        <label for="{{alternativa.id}}__{{alternativa.perfil}}"> {{alternativa.conteudo}}</label>
+        {% endif %}
+        {% if alternativa.pergunta.teste.tipo == 2 %}
+        <input type="radio" name="{{alternativa.pergunta.id}}" id="radio_alternativa" value="{{alternativa.perfil}}" onclick="Check(this)" required
+               {% if alternativa.id in respostas %}
+                  checked = true
+               {% endif %}>
+        <label for="radio_alternativa"> {{alternativa.conteudo}}</label>
+        {% endif %}
+        <br>
+      </div>
+      {% endfor %}
+    </filedset>
+    {% endfor %}
+    <div align="center" id="retorno" style="color: red">
+      {{retorno}}
+    </div>
+    <div class="col-md-4 offset-md-4 margin-cabecalho">
+      <button id="botaoEnviar" class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar</button>
+    </div>
+  </div>
+</form>
 </div>
 <script src="/static/js/javascript.js"></script>
 {% endblock %}

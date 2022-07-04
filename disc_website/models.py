@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+import hashlib
 
 # Create your models here.
 
@@ -14,9 +15,15 @@ class Aluno(models.Model):
   ra = models.IntegerField(unique=True, blank=False)
   email = models.EmailField(max_length=254, blank=False)
   aluno_empregado = models.BooleanField(default=False)
+  cpf = models.CharField(max_length=11, default='11111111111')
   #turma = models.ManyToManyField(Turma)
+
+  def save(self, *args, **kwargs):
+        self.cpf = hashlib.md5(self.cpf.encode(encoding = 'UTF-8'))
+        super(Aluno, self).save(*args, **kwargs)
+
   def __str__(self):
-      return str(self.ra)
+    return str(self.ra)
 
 class Resultado(models.Model):
   aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
@@ -49,9 +56,14 @@ class Resultado(models.Model):
   def __str__(self):
       return ' - '.join([str(self.aluno.ra), self.data_fim.isoformat()])
 
+CHOICES_TIPO = (
+  (1,'check-box'),
+  (2,'radio-button'),
+)
 
 class Teste(models.Model):
   nome = models.CharField(max_length=30)
+  tipo = models.IntegerField(choices=CHOICES_TIPO, blank=False)
 
   def __str__(self):
     return self.nome
