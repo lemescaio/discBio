@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-f#=mmzt3-=e6s1#ij*z9!23&4zb0qux(xovvhn=p9tfvq#nlsi
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'discbio.eba-xnkszbjm.us-west-2.elasticbeanstalk.com',
+    'disc-biopark.eba-3zgip3uw.us-west-2.elasticbeanstalk.com',
     '127.0.0.1',
     'localhost'
 ]
