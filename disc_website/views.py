@@ -11,7 +11,9 @@ import pytz
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_protect
-
+from functools import reduce
+from django.db.models import Q
+import operator
 import csv
 
 utc=pytz.UTC
@@ -65,21 +67,44 @@ def resultados_csv(request):
 def resultados(request):
     if request.method == 'POST':
         busca = request.POST['buscaAluno']
+        empregado = request.POST['empregado']
+        desempregado = request.POST['desempregado']
+        domin = request.POST['dominante']
+        caute = request.POST['cauteloso']
+        influ = request.POST['influente']
+        estav = request.POST['estavel']
+        
+        listaPerfis = []
+        if domin == 'on':
+            listaPerfis.append("Dominante")
+        if caute == 'on':
+            listaPerfis.append("Cauteloso")
+        if influ == 'on':
+            listaPerfis.append("Influente")
+        if estav == 'on':
+            listaPerfis.append("Estável")
+         
         if not busca:
-            alunos = Aluno.objects.all()
-            return render(request, "disc_website/resultados.html",
-                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
-                           "navbar_resultados": "active"})
+            if empregado == 'on' and desempregado == '':
+                alunos = Aluno.objects.filter(aluno_empregado='True')
+            elif empregado == '' and desempregado == 'on':
+                alunos = Aluno.objects.filter(aluno_empregado='False')
+            elif empregado == 'on' and desempregado == 'on' or empregado == '' and desempregado == '':
+                alunos = Aluno.objects.all()
+
         else:
-            alunos = Aluno.objects.filter(nome__icontains=busca)
-            return render(request, "disc_website/resultados.html",
-                          {"resultados": Resultado.objects.filter(aluno__in=alunos),
-                           "navbar_resultados": "active"})
+            if empregado == 'on' and desempregado == '':
+                alunos = Aluno.objects.filter(nome__icontains=busca, aluno_empregado='True')
+            elif empregado == '' and desempregado == 'on':
+                alunos = Aluno.objects.filter(nome__icontains=busca, aluno_empregado='False')
+            elif empregado == 'on' and desempregado == 'on' or empregado == '' and desempregado == '':
+                alunos = Aluno.objects.filter(nome__icontains=busca)
+
     else:
         alunos = Aluno.objects.all()
 
     return render(request, "disc_website/resultados.html",
-                  {"resultados": Resultado.objects.filter(aluno__in=alunos),
+                  {"resultados": Resultado.objects.filter(reduce(operator.or_, (Q(aluno__in=alunos, resultado_final__contains=x) for x in listaPerfis))),
                    "navbar_resultados" : "active"})
 
 

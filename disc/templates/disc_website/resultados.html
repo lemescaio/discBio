@@ -26,25 +26,58 @@
                 <i class="bi-search" ></i>
               </button>
             </div>
+            <div class="filters-container">
+              <h5>Situação:</h5>
+              <div class="form-check">
+                <input class="form-check-input" type="hidden" id="empregado" name="empregado" checked="empregado">
+                <input class="form-check-input" type="checkbox" id="empregado" name="empregado" checked="empregado">
+                
+                <label class="form-check-label" for="empregado">
+                  Empregado
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="desempregado" name="desempregado" type="hidden" checked="desempregado">
+                <input class="form-check-input" id="desempregado" name="desempregado" type="checkbox" checked="desempregado">
+
+                <label class="form-check-label" for="desempregado">
+                  Desempregado
+                </label>
+              </div>
+            </div>
+            <div class="filters-container">
+              <h5>Perfil:</h5>
+              <div class="form-check">
+                <input class="form-check-input" type="hidden" id="dominante" name="dominante" checked="dominante">
+                <input class="form-check-input" type="checkbox" id="dominante" name="dominante" checked="dominante">
+                <label class="form-check-label" for="dominante">
+                  Dominante
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="cauteloso" name="cauteloso" type="hidden" checked="cauteloso">
+                <input class="form-check-input" id="cauteloso" name="cauteloso" type="checkbox" checked="cauteloso">
+                <label class="form-check-label" for="cauteloso">
+                  Cauteloso
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="influente" name="influente" type="hidden" checked="influente">
+                <input class="form-check-input" id="influente" name="influente" type="checkbox" checked="influente">
+                <label class="form-check-label" for="influente">
+                  Influente
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="estavel" name="estavel" type="hidden" checked="estavel">
+                <input class="form-check-input" id="estavel" name="estavel" type="checkbox" checked="estavel">
+                <label class="form-check-label" for="estavel">
+                  Estável
+                </label>
+              </div>
+            </div>
           </form>
         </div>
-
-        <div class="filters-container">
-          <h5>Situação:</h5>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="empregado" name="empregado" checked="empregado">
-            <label class="form-check-label" for="empregado">
-              Empregado
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" id="desempregado" name="desempregado" type="checkbox" checked="desempregado">
-            <label class="form-check-label" for="desempregado">
-              Desempregado
-            </label>
-          </div>
-        </div>
-
       </aside>
 
       {% comment %} <table class="legendaTable" style="margin: 2%">
