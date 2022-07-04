@@ -5,7 +5,7 @@
         "fields": {
             "nome": "Andre",
             "ra": 456,
-            "email": "andre@biopark.com",
+            "email": "andredorr@biopark.com",
             "aluno_empregado": true
         }
     },
