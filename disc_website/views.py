@@ -102,6 +102,7 @@ def resultados(request):
 
     else:
         alunos = Aluno.objects.all()
+        listaPerfis = ["Dominante", "Cauteloso", "Influente", "Estável"]
 
     return render(request, "disc_website/resultados.html",
                   {"resultados": Resultado.objects.filter(reduce(operator.or_, (Q(aluno__in=alunos, resultado_final__contains=x) for x in listaPerfis))),
